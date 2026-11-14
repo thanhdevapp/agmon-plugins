@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Git Log</title><link rel="stylesheet" href="./style.css"></head>
+<body>
+<div class="layout" id="layout">
+  <aside class="pane branches" aria-label="Branches">
+    <div class="bar">
+      <button id="collapse" class="tool" title="Collapse branch panel" aria-label="Collapse branch panel" aria-pressed="false"></button>
+      <span class="search"><input id="branch-search" type="search" placeholder="Filter branches" aria-label="Filter branches"></span>
+    </div>
+    <div id="tree" class="tree" role="tree" aria-label="References"></div>
+  </aside>
+  <div class="splitter" id="left-split" role="separator" tabindex="0" aria-label="Resize branches pane" aria-orientation="vertical" aria-valuemin="150" aria-valuemax="420" aria-valuenow="220"></div>
+  <main class="pane history">
+    <div class="bar filters">
+      <span class="search">
+        <input id="search" type="search" placeholder="Text or hash" aria-label="Search commits">
+        <button id="regex" class="tool inline" title="Use regular expression" aria-label="Use regular expression" aria-pressed="false">.*</button>
+        <button id="case" class="tool inline" title="Match case" aria-label="Match case" aria-pressed="false">Aa</button>
+      </span>
+      <button id="filter-branch" class="tool" aria-pressed="false">Branch</button>
+      <button id="filter-author" class="tool" aria-pressed="false">User</button>
+      <button id="filter-date" class="tool" aria-pressed="false">Date</button>
+      <button id="filter-path" class="tool" aria-pressed="false">Paths</button>
+      <button id="sort" class="tool" aria-pressed="false" title="Sort: newest first" aria-label="Toggle sort order">Newest</button>
+      <span class="spacer"></span>
+      <button id="dim" class="tool" aria-pressed="true" title="Dim commits not on HEAD" aria-label="Dim commits not on HEAD">Dim off-HEAD</button>
+      <button id="head" class="tool" title="Go to the HEAD commit" aria-label="Go to the HEAD commit">Locate HEAD</button>
+      <button id="refresh" class="tool" title="Reload history" aria-label="Refresh history">Refresh</button>
+      <button id="fetch" class="tool" title="Fetch from remotes" aria-label="Fetch from remotes">Fetch</button>
+    </div>
+    <div id="filter-panel" class="filter-panel" hidden>
+      <label class="filter-field"><span>Branch</span><input id="filter-branch-input" type="search" placeholder="Branch name" aria-label="Filter by branch"></label>
+      <label class="filter-field"><span>User</span><input id="filter-author-input" type="search" placeholder="Author name" aria-label="Filter by author"></label>
+      <label class="filter-field"><span>From</span><input id="since" type="date" aria-label="Commits since"></label>
+      <label class="filter-field"><span>To</span><input id="until" type="date" aria-label="Commits until"></label>
+      <label class="filter-field"><span>Path</span><input id="path" type="search" placeholder="Path" aria-label="Filter by path"></label>
+      <button id="filter-clear" class="tool">Clear</button>
+    </div>
+    <div id="grid" class="grid" role="grid" tabindex="0" aria-label="Commit log" aria-rowcount="0">
+      <div class="columns" role="row" aria-rowindex="1">
+        <span role="columnheader">Graph</span><span role="columnheader">Subject</span><span role="columnheader" class="author-col">Author</span><span role="columnheader" class="date-col">Date</span><span role="columnheader" class="ci-col">Build</span>
+      </div>
+      <div id="list" class="list" role="rowgroup"><div id="spacer"></div></div>
+    </div>
+  </main>
+  <div class="splitter" id="right-split" role="separator" tabindex="0" aria-label="Resize details pane" aria-orientation="vertical" aria-valuemin="220" aria-valuemax="520" aria-valuenow="300"></div>
+  <aside class="pane details" aria-label="Commit information">
+    <div class="right-panes" id="right-panes">
+      <section class="changes" aria-labelledby="changes-title">
+        <h2 id="changes-title">Changes <span id="count" class="pill"></span></h2>
+        <div id="files" class="contents"><p class="empty">Select a commit to view its changes.</p></div>
+      </section>
+      <div class="hsplit" id="right-hsplit" role="separator" tabindex="0" aria-label="Resize commit details" aria-orientation="horizontal" aria-valuemin="120" aria-valuemax="520" aria-valuenow="280"></div>
+      <section class="metadata" aria-labelledby="detail-title">
+        <h2 id="detail-title">Commit details</h2>
+        <div id="detail" class="contents" tabindex="-1"><p class="empty">Select a commit to view its details.</p></div>
+      </section>
+    </div>
+  </aside>
+</div>
+<div class="statusbar">
+  <span id="branch-status" class="mono"></span>
+  <span id="status" class="mono" role="status" aria-live="polite">Connecting...</span>
+  <span class="spacer"></span>
+  <span id="count-status" class="mono"></span>
+  <button id="copy" class="tool" hidden>Copy hash</button>
+  <button id="more" class="tool" hidden>Load more</button>
+</div>
+<div id="fetched" class="fetched" hidden>
+  <div class="fetched-title">
+    <span class="dot"></span>Fetched
+    <button id="fetched-close" class="tool" aria-label="Dismiss the fetch status">Dismiss</button>
+  </div>
+  <div id="fetched-detail" class="mono"></div>
+</div>
+<div id="menu" class="menu" role="menu" aria-label="Commit actions" hidden></div>
+<script type="module" src="./main.js"></script></body></html>

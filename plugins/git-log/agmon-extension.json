@@ -1,0 +1,43 @@
+{
+  "id": "thanhdevapp.agmon-git-log",
+  "name": "Git Log",
+  "version": "1.0.0",
+  "publisher": "thanhdevapp",
+  "execution": "sandboxed-ui",
+  "description": "Git history for AGMon with a lane graph, branch tree, filters, changed files and commit details.",
+  "entry": "index.html",
+  "sandbox": {
+    "type": "iframe-opaque-origin",
+    "attributes": "allow-scripts",
+    "allowSameOrigin": false
+  },
+  "permissions": [
+    "git:readHistory",
+    "theme:subscribe"
+  ],
+  "contributes": {
+    "editorTabs": [
+      {
+        "id": "git-log",
+        "title": "Git Log",
+        "icon": "GitBranch",
+        "closable": true
+      }
+    ],
+    "activityBar": [
+      {
+        "id": "git-log",
+        "title": "Git Log",
+        "icon": "GitBranch",
+        "command": "gitLog.open"
+      }
+    ],
+    "commands": [
+      {
+        "command": "gitLog.open",
+        "title": "Plugin: Open Git Log",
+        "category": "Git"
+      }
+    ]
+  }
+}
