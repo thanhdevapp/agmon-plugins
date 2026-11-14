@@ -39,7 +39,9 @@ changed.
 ## Develop
 
 ```bash
-node --test plugins/git-log/git-log.test.cjs   # plugin UI tests
+npm install
+npx playwright install chromium
+npm test                                  # plugin UI tests
 ```
 
 The plugin folder is committed on purpose: it is what AGMon downloads and

@@ -1,0 +1,13 @@
+{
+  "name": "agmon-plugins",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Open-source AGMon plugins, one folder per plugin.",
+  "scripts": {
+    "test": "node --test plugins/git-log/git-log.test.cjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.51.0"
+  }
+}
