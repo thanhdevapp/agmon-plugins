@@ -401,3 +401,39 @@ test('restarts the history when the host reports a stale cursor', async () => {
   assert.deepEqual(errors, []);
   await page.close();
 });
+
+test('copies the selected hash inside the opaque-origin sandbox', async () => {
+  browser = browser || (await chromium.launch({ headless: true }));
+  const { page, frame, errors } = await openPlugin();
+
+  await frame.getByText('First commit', { exact: true }).waitFor();
+  const pluginFrame = page.frames().find((candidate) => candidate !== page.mainFrame());
+  await pluginFrame.evaluate(() => {
+    // The host runs the plugin in a secure opaque-origin iframe, where the
+    // Clipboard API exists but every write is rejected by Permissions Policy.
+    Object.defineProperty(navigator, 'clipboard', {
+      configurable: true,
+      value: { writeText: () => Promise.reject(new DOMException('blocked', 'NotAllowedError')) },
+    });
+    window.__copied = [];
+    const original = document.execCommand.bind(document);
+    document.execCommand = (command, ...rest) => {
+      if (command === 'copy') {
+        const active = document.activeElement;
+        window.__copied.push(active && typeof active.value === 'string' ? active.value : '');
+      }
+      return original(command, ...rest);
+    };
+  });
+
+  await frame.locator('.row').first().click();
+  const hash = await frame.locator('.row[aria-selected="true"]').first().getAttribute('data-hash');
+  await frame.locator('#copy').click();
+
+  assert.equal(await frame.locator('#status').textContent(), 'Copied to clipboard.');
+  const copied = await pluginFrame.evaluate(() => window.__copied);
+  assert.deepEqual(copied, [hash]);
+
+  assert.deepEqual(errors, []);
+  await page.close();
+});

@@ -638,21 +638,48 @@ import { createIcon } from './icons.js';
 
   async function copyText(value) {
     const payload = text(value);
-    try {
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        await navigator.clipboard.writeText(payload);
-      } else {
-        const area = document.createElement('textarea');
-        area.value = payload;
-        document.body.appendChild(area);
-        area.select();
-        document.execCommand('copy');
-        area.remove();
-      }
+    if (await writeWithClipboardApi(payload) || writeWithSelection(payload)) {
       showStatus('Copied to clipboard.');
-    } catch {
-      showStatus('Copy failed. Select the text manually.', true);
+      return;
     }
+    showStatus('Copy failed. Select the text manually.', true);
+  }
+
+  async function writeWithClipboardApi(payload) {
+    if (!navigator.clipboard || !navigator.clipboard.writeText) return false;
+    try {
+      await navigator.clipboard.writeText(payload);
+      return true;
+    } catch {
+      return false;
+    }
+  }
+
+  // The plugin runs in an opaque-origin sandbox where the Clipboard API is
+  // rejected by Permissions Policy, so the selection copy is the working path.
+  function writeWithSelection(payload) {
+    const area = document.createElement('textarea');
+    area.value = payload;
+    area.setAttribute('readonly', '');
+    area.style.position = 'fixed';
+    area.style.top = '-1000px';
+    area.style.opacity = '0';
+    const selection = document.getSelection();
+    const previous = selection && selection.rangeCount > 0 ? selection.getRangeAt(0) : null;
+    document.body.appendChild(area);
+    area.select();
+    let copied = false;
+    try {
+      copied = document.execCommand('copy');
+    } catch {
+      copied = false;
+    }
+    area.remove();
+    if (previous && selection) {
+      selection.removeAllRanges();
+      selection.addRange(previous);
+    }
+    return copied;
   }
 
   function copySelectedHash() {
