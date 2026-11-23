@@ -1,0 +1,50 @@
+{
+  "id": "community.agent-control-room",
+  "name": "Agent Control Room, Inbox & Pitwall HUD",
+  "version": "1.0.0",
+  "publisher": "community",
+  "license": "MIT",
+  "category": "Monitoring",
+  "execution": "sandboxed-ui",
+  "description": "Unified Agent Inbox, Decision Gate queue, live Subagent DAG, Pitwall token/cost HUD, and Skill & MCP usage analytics.",
+  "entry": "index.html",
+  "sandbox": {
+    "type": "iframe-opaque-origin",
+    "attributes": "allow-scripts",
+    "allowSameOrigin": false
+  },
+  "permissions": [
+    "traces:subscribe",
+    "workbench:openSession",
+    "analytics:readMetrics",
+    "statusBar:update",
+    "theme:subscribe"
+  ],
+  "contributes": {
+    "sidebarPanels": [
+      {
+        "id": "control-room",
+        "title": "Control Room",
+        "icon": "Activity",
+        "position": "right"
+      }
+    ],
+    "statusBarItems": [
+      {
+        "id": "inbox-count",
+        "text": "Inbox: 0",
+        "tooltip": "Agents waiting for input",
+        "alignment": "right"
+      }
+    ],
+    "editorTabs": [
+      {
+        "id": "control-room-tab",
+        "title": "Agent Control Room",
+        "type": "plugin",
+        "icon": "Activity",
+        "closable": true
+      }
+    ]
+  }
+}

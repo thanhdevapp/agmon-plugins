@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Audio Alerts & Presence Configurator</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<div class="shell">
+  <div class="bar"><h1>Audio Alerts &amp; Presence</h1><button class="btn primary" id="btnTest">Test Chime</button></div>
+  <div class="body">
+    <div class="card"><strong>Sound Pack</strong><div style="margin-top:6px;"><select id="pack"><option value="chime">Clean Chime</option><option value="arcade">Retro Arcade</option><option value="sonar">Deep Sonar</option><option value="muted">Muted</option></select></div></div>
+    <div class="card"><strong>Live Presence &amp; Stream Deck Payload (Read-Only)</strong><pre id="payload" class="mono muted" style="white-space:pre-wrap;margin-top:6px;"></pre></div>
+  </div>
+</div>
+  <script src="./main.js"></script>
+</body>
+</html>

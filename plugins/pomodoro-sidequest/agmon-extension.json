@@ -1,0 +1,41 @@
+{
+  "id": "community.pomodoro-sidequest",
+  "name": "Pomodoro & Offline Sidequest Arcade",
+  "version": "1.0.0",
+  "publisher": "community",
+  "license": "MIT",
+  "category": "Other",
+  "execution": "sandboxed-ui",
+  "description": "Status-bar Pomodoro timer plus an offline Snake & Endless Runner canvas game in the sidebar that automatically pauses when any agent needs your attention.",
+  "entry": "index.html",
+  "sandbox": {
+    "type": "iframe-opaque-origin",
+    "attributes": "allow-scripts",
+    "allowSameOrigin": false
+  },
+  "permissions": [
+    "traces:subscribe",
+    "storage:pluginScope",
+    "statusBar:update",
+    "notifications:toast",
+    "theme:subscribe"
+  ],
+  "contributes": {
+    "sidebarPanels": [
+      {
+        "id": "focus-arcade",
+        "title": "Focus & Arcade",
+        "icon": "Timer",
+        "position": "right"
+      }
+    ],
+    "statusBarItems": [
+      {
+        "id": "pomodoro",
+        "text": "Focus 25:00",
+        "tooltip": "Pomodoro focus timer",
+        "alignment": "right"
+      }
+    ]
+  }
+}

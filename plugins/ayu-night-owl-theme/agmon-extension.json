@@ -1,0 +1,89 @@
+{
+  "id": "community.ayu-night-owl-theme",
+  "name": "Ayu & Night Owl Pack",
+  "version": "1.0.0",
+  "publisher": "community",
+  "license": "MIT",
+  "category": "Themes",
+  "execution": "data",
+  "description": "Ayu (Dark, Mirage, Light) and Night Owl / Light Owl palettes tuned for long sessions.",
+  "permissions": [],
+  "contributes": {
+    "themes": [
+      {
+        "id": "ayu-dark-pack",
+        "name": "Ayu Dark",
+        "category": "dark",
+        "description": "Clean amber on obsidian",
+        "tokens": {
+          "--bg-workbench": "#0b0e14",
+          "--bg-panel": "#0f131a",
+          "--bg-sidebar": "#0d1017",
+          "--bg-editor": "#0b0e14",
+          "--text-main": "#bfbdb6",
+          "--text-muted": "#8a9199",
+          "--border-subtle": "#1c212b",
+          "--accent-primary": "#e6b450",
+          "--terminal-bg": "#0b0e14"
+        }
+      },
+      {
+        "id": "ayu-mirage-pack",
+        "name": "Ayu Mirage",
+        "category": "dark",
+        "description": "Warm twilight slate",
+        "tokens": {
+          "--bg-workbench": "#1f2430",
+          "--bg-panel": "#242936",
+          "--bg-sidebar": "#1c212b",
+          "--bg-editor": "#1f2430",
+          "--text-main": "#cccac2",
+          "--text-muted": "#8a9199",
+          "--border-subtle": "#333b4d",
+          "--accent-primary": "#ffcc66",
+          "--terminal-bg": "#1f2430"
+        }
+      },
+      {
+        "id": "night-owl-dark",
+        "name": "Night Owl",
+        "category": "dark",
+        "description": "Deep ocean midnight blue",
+        "tokens": {
+          "--bg-workbench": "#011627",
+          "--bg-panel": "#01111d",
+          "--bg-sidebar": "#011627",
+          "--bg-editor": "#011627",
+          "--text-main": "#d6deeb",
+          "--text-muted": "#89a4bb",
+          "--border-subtle": "#1d3b53",
+          "--accent-primary": "#7e57c2",
+          "--terminal-bg": "#011627"
+        }
+      },
+      {
+        "id": "light-owl-day",
+        "name": "Light Owl",
+        "category": "light",
+        "description": "Daytime high-contrast companion",
+        "tokens": {
+          "--bg-workbench": "#fbfbfb",
+          "--bg-panel": "#f0f0f0",
+          "--bg-sidebar": "#f3f3f3",
+          "--bg-editor": "#fbfbfb",
+          "--text-main": "#403f53",
+          "--text-muted": "#7a8181",
+          "--border-subtle": "#d9d9d9",
+          "--accent-primary": "#2aa298",
+          "--terminal-bg": "#fbfbfb"
+        }
+      }
+    ]
+  },
+  "entry": null,
+  "sandbox": {
+    "type": "none",
+    "attributes": "",
+    "allowSameOrigin": false
+  }
+}

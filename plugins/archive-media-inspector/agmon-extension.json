@@ -1,0 +1,41 @@
+{
+  "id": "community.archive-media-inspector",
+  "name": "Archive, Font, Audio & Trace Inspector",
+  "version": "1.0.0",
+  "publisher": "community",
+  "license": "MIT",
+  "category": "Viewers",
+  "execution": "sandboxed-ui",
+  "description": "Inspect ZIP/JAR/APK archives without extracting, preview fonts (TTF/OTF/WOFF2), play audio files, and inspect VCD/Chrome trace files offline.",
+  "entry": "index.html",
+  "sandbox": {
+    "type": "iframe-opaque-origin",
+    "attributes": "allow-scripts",
+    "allowSameOrigin": false
+  },
+  "permissions": [
+    "editor:openedFile",
+    "theme:subscribe"
+  ],
+  "contributes": {
+    "customEditors": [
+      {
+        "id": "archive-media-inspector",
+        "title": "Archive & Media Inspector",
+        "extensions": [
+          ".zip",
+          ".jar",
+          ".apk",
+          ".whl",
+          ".ttf",
+          ".otf",
+          ".woff2",
+          ".wav",
+          ".mp3",
+          ".vcd"
+        ],
+        "maxFileSizeBytes": 8388608
+      }
+    ]
+  }
+}

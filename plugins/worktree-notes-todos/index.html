@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Worktree Notes, Scratchpad & TODOs</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<div class="shell">
+  <div class="bar"><h1 id="hdr">Notes &amp; TODOs</h1><button class="btn" id="btnExport">Export MD</button><button class="btn primary" id="btnSaveNote">Save</button></div>
+  <div class="body">
+    <textarea id="note" class="input" style="width:100%;height:140px;" placeholder="Scratchpad & worktree notes (kept outside git)..."></textarea>
+    <div style="display:flex;gap:6px;margin:8px 0;"><input id="todoIn" class="input" style="flex:1;" placeholder="Add TODO item..." /><button class="btn primary" id="btnAddTodo">+ Add</button></div>
+    <div id="todos"></div>
+  </div>
+</div>
+  <script src="./main.js"></script>
+</body>
+</html>

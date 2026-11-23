@@ -1,0 +1,89 @@
+{
+  "id": "community.rose-pine-oled-theme",
+  "name": "Rose Pine & True OLED Pack",
+  "version": "1.0.0",
+  "publisher": "community",
+  "license": "MIT",
+  "category": "Themes",
+  "execution": "data",
+  "description": "Rose Pine (Main, Moon, Dawn) plus pitch-black True OLED theme for OLED monitors.",
+  "permissions": [],
+  "contributes": {
+    "themes": [
+      {
+        "id": "rose-pine-main",
+        "name": "Rose Pine",
+        "category": "dark",
+        "description": "Natural pine and soho rose",
+        "tokens": {
+          "--bg-workbench": "#191724",
+          "--bg-panel": "#1f1d2e",
+          "--bg-sidebar": "#1f1d2e",
+          "--bg-editor": "#191724",
+          "--text-main": "#e0def4",
+          "--text-muted": "#908caa",
+          "--border-subtle": "#26233a",
+          "--accent-primary": "#ebbcba",
+          "--terminal-bg": "#191724"
+        }
+      },
+      {
+        "id": "rose-pine-moon",
+        "name": "Rose Pine Moon",
+        "category": "dark",
+        "description": "Deep moonlit twilight",
+        "tokens": {
+          "--bg-workbench": "#232136",
+          "--bg-panel": "#2a273f",
+          "--bg-sidebar": "#2a273f",
+          "--bg-editor": "#232136",
+          "--text-main": "#e0def4",
+          "--text-muted": "#908caa",
+          "--border-subtle": "#393552",
+          "--accent-primary": "#ea9a97",
+          "--terminal-bg": "#232136"
+        }
+      },
+      {
+        "id": "rose-pine-dawn",
+        "name": "Rose Pine Dawn",
+        "category": "light",
+        "description": "Warm morning rose light theme",
+        "tokens": {
+          "--bg-workbench": "#faf4ed",
+          "--bg-panel": "#fffaf3",
+          "--bg-sidebar": "#f2e9e1",
+          "--bg-editor": "#faf4ed",
+          "--text-main": "#575279",
+          "--text-muted": "#797593",
+          "--border-subtle": "#dfdad9",
+          "--accent-primary": "#d7827e",
+          "--terminal-bg": "#faf4ed"
+        }
+      },
+      {
+        "id": "true-oled-black",
+        "name": "True OLED Black",
+        "category": "dark",
+        "description": "Zero-emission pure #000000 OLED palette",
+        "tokens": {
+          "--bg-workbench": "#000000",
+          "--bg-panel": "#070709",
+          "--bg-sidebar": "#050507",
+          "--bg-editor": "#000000",
+          "--text-main": "#f4f4f5",
+          "--text-muted": "#a1a1aa",
+          "--border-subtle": "#27272a",
+          "--accent-primary": "#38bdf8",
+          "--terminal-bg": "#000000"
+        }
+      }
+    ]
+  },
+  "entry": null,
+  "sandbox": {
+    "type": "none",
+    "attributes": "",
+    "allowSameOrigin": false
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "community.lang-vi",
+  "name": "Tieng Viet Language Pack",
+  "version": "1.0.0",
+  "publisher": "community",
+  "license": "MIT",
+  "category": "Other",
+  "execution": "data",
+  "description": "Goi ban dia hoa giao dien Tieng Viet Zero-JS cho AGMon Workbench, Market, Cai dat va Bang lenh.",
+  "permissions": [],
+  "contributes": {
+    "languagePacks": [
+      {
+        "locale": "vi",
+        "label": "Tieng Viet (Vietnam)",
+        "strings": {
+          "workbench.welcome": "Chao mung den voi AGMon",
+          "workbench.extensions": "Tien ich mo rong",
+          "workbench.market": "Cho Plugin",
+          "workbench.installed": "Da cai dat",
+          "workbench.settings": "Cai dat",
+          "workbench.terminal": "Terminal",
+          "workbench.tasks": "Cong viec (Kanban)",
+          "workbench.files": "Tep du an",
+          "workbench.prChecks": "PR & Kiem thu CI",
+          "workbench.inspector": "Trinh thanh tra",
+          "status.needsYou": "Can ban duyet",
+          "status.working": "Dang chay",
+          "status.ready": "San sang",
+          "action.install": "Cai dat",
+          "action.enable": "Bat",
+          "action.disable": "Tat",
+          "action.uninstall": "Go bo",
+          "action.save": "Luu tep",
+          "action.openAsText": "Mo dang van ban",
+          "action.openViewer": "Mo trinh xem"
+        }
+      }
+    ]
+  },
+  "entry": null,
+  "sandbox": {
+    "type": "none",
+    "attributes": "",
+    "allowSameOrigin": false
+  }
+}

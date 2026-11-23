@@ -1,0 +1,39 @@
+{
+  "id": "community.office-rich-docs",
+  "name": "Rich Docs, LaTeX & Office Viewer",
+  "version": "1.0.0",
+  "publisher": "community",
+  "license": "MIT",
+  "category": "Viewers",
+  "execution": "sandboxed-ui",
+  "description": "Editable split-preview for MDX, LaTeX, AsciiDoc, and Fountain plus read-only Word (.docx) and PowerPoint (.pptx) document inspection.",
+  "entry": "index.html",
+  "sandbox": {
+    "type": "iframe-opaque-origin",
+    "attributes": "allow-scripts",
+    "allowSameOrigin": false
+  },
+  "permissions": [
+    "editor:openedFile",
+    "editor:saveOpenedFile",
+    "theme:subscribe"
+  ],
+  "contributes": {
+    "customEditors": [
+      {
+        "id": "office-rich-docs-editor",
+        "title": "Rich Docs & Office Viewer",
+        "extensions": [
+          ".docx",
+          ".pptx",
+          ".tex",
+          ".adoc",
+          ".fountain",
+          ".mdx"
+        ],
+        "editable": true,
+        "maxFileSizeBytes": 8388608
+      }
+    ]
+  }
+}

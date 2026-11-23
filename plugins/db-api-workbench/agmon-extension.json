@@ -1,0 +1,56 @@
+{
+  "id": "community.db-api-workbench",
+  "name": "DB Query & HTTP/GraphQL Workbench",
+  "version": "1.0.0",
+  "publisher": "community",
+  "license": "MIT",
+  "category": "Developer Tools",
+  "execution": "sandboxed-ui",
+  "description": "SQL query workbook (PostgreSQL, MySQL, SQLite, Redis, MongoDB templates) plus .http and GraphQL collection composer persisted per workspace.",
+  "entry": "index.html",
+  "sandbox": {
+    "type": "iframe-opaque-origin",
+    "attributes": "allow-scripts",
+    "allowSameOrigin": false
+  },
+  "permissions": [
+    "db:localReadOnly",
+    "http:localDevRequest",
+    "storage:pluginScope",
+    "files:exportCopy",
+    "theme:subscribe"
+  ],
+  "contributes": {
+    "sidebarPanels": [
+      {
+        "id": "db-api",
+        "title": "DB & API",
+        "icon": "Database",
+        "position": "right"
+      }
+    ],
+    "settings": [
+      {
+        "key": "defaultEngine",
+        "title": "Default DB Engine",
+        "type": "enum",
+        "default": "postgresql",
+        "options": [
+          "postgresql",
+          "mysql",
+          "sqlite",
+          "redis",
+          "mongodb"
+        ],
+        "description": ""
+      },
+      {
+        "key": "readOnlyByDefault",
+        "title": "Read-Only Safety Mode",
+        "type": "boolean",
+        "default": true,
+        "description": ""
+      }
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "community.fleet-os-vitals",
+  "name": "Fleet & OS Vitals Monitor",
+  "version": "1.0.0",
+  "publisher": "community",
+  "license": "MIT",
+  "category": "Monitoring",
+  "execution": "sandboxed-ui",
+  "description": "Live bounded OS vitals (CPU cores, 1/5/15m load averages, RAM usage bar, uptime) in the sidebar and status bar without high-frequency ps polling.",
+  "entry": "index.html",
+  "sandbox": {
+    "type": "iframe-opaque-origin",
+    "attributes": "allow-scripts",
+    "allowSameOrigin": false
+  },
+  "permissions": [
+    "system:readVitals",
+    "statusBar:update",
+    "theme:subscribe"
+  ],
+  "contributes": {
+    "sidebarPanels": [
+      {
+        "id": "vitals",
+        "title": "OS Vitals",
+        "icon": "Cpu",
+        "position": "right"
+      }
+    ],
+    "statusBarItems": [
+      {
+        "id": "ram-load",
+        "text": "RAM --%",
+        "tooltip": "Host RAM and 1m load average",
+        "alignment": "right"
+      }
+    ]
+  }
+}

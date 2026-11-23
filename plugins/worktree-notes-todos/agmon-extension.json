@@ -1,0 +1,33 @@
+{
+  "id": "community.worktree-notes-todos",
+  "name": "Worktree Notes, Scratchpad & TODOs",
+  "version": "1.0.0",
+  "publisher": "community",
+  "license": "MIT",
+  "category": "Other",
+  "execution": "sandboxed-ui",
+  "description": "Per-workspace Markdown notes, global scratchpad, and prioritized TODO list stored safely in plugin storage without polluting git status.",
+  "entry": "index.html",
+  "sandbox": {
+    "type": "iframe-opaque-origin",
+    "attributes": "allow-scripts",
+    "allowSameOrigin": false
+  },
+  "permissions": [
+    "storage:pluginScope",
+    "workspace:readSummary",
+    "notifications:toast",
+    "files:exportCopy",
+    "theme:subscribe"
+  ],
+  "contributes": {
+    "sidebarPanels": [
+      {
+        "id": "notes-todos",
+        "title": "Notes & TODOs",
+        "icon": "StickyNote",
+        "position": "right"
+      }
+    ]
+  }
+}

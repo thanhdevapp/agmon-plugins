@@ -1,0 +1,49 @@
+{
+  "id": "community.spreadsheet-data-studio",
+  "name": "Spreadsheet & SQLite/Parquet Studio",
+  "version": "1.0.0",
+  "publisher": "community",
+  "license": "MIT",
+  "category": "Viewers",
+  "execution": "sandboxed-ui",
+  "description": "Edit CSV/TSV spreadsheets with =SUM/=AVG formulas, row editing, filter, and save-in-place; inspect SQLite, Parquet, and Excel structures offline.",
+  "entry": "index.html",
+  "sandbox": {
+    "type": "iframe-opaque-origin",
+    "attributes": "allow-scripts",
+    "allowSameOrigin": false
+  },
+  "permissions": [
+    "editor:openedFile",
+    "editor:saveOpenedFile",
+    "files:exportCopy",
+    "theme:subscribe"
+  ],
+  "contributes": {
+    "customEditors": [
+      {
+        "id": "spreadsheet-sqlite-editor",
+        "title": "Spreadsheet & Data Studio",
+        "extensions": [
+          ".tsv",
+          ".xlsx",
+          ".ods",
+          ".sqlite3",
+          ".db",
+          ".parquet"
+        ],
+        "editable": true,
+        "maxFileSizeBytes": 8388608
+      }
+    ],
+    "newFiles": [
+      {
+        "id": "new-tsv-sheet",
+        "title": "New TSV Spreadsheet",
+        "defaultFileName": "sheet.tsv",
+        "extension": ".tsv",
+        "content": "Item\tQty\tPrice\nServer\t2\t120\nTotal\t=SUM(B2:B2)\t=SUM(C2:C2)\n"
+      }
+    ]
+  }
+}

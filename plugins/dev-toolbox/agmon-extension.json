@@ -1,0 +1,36 @@
+{
+  "id": "community.dev-toolbox",
+  "name": "Offline Dev Toolbox",
+  "version": "1.0.0",
+  "publisher": "community",
+  "license": "MIT",
+  "category": "Developer Tools",
+  "execution": "sandboxed-ui",
+  "description": "Offline developer utilities in AGMon's sidebar: JWT decoder, Base64 codec, JSON formatter, Regex tester, UUID generator, Docker run to Compose, and WCAG contrast checker.",
+  "entry": "index.html",
+  "sandbox": {
+    "type": "iframe-opaque-origin",
+    "attributes": "allow-scripts",
+    "allowSameOrigin": false
+  },
+  "permissions": [
+    "theme:subscribe"
+  ],
+  "contributes": {
+    "sidebarPanels": [
+      {
+        "id": "toolbox",
+        "title": "Dev Toolbox",
+        "icon": "Wrench",
+        "position": "right"
+      }
+    ],
+    "commands": [
+      {
+        "command": "devToolbox.open",
+        "title": "Plugin: Open Offline Dev Toolbox",
+        "category": "Developer Tools"
+      }
+    ]
+  }
+}

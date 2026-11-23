@@ -1,0 +1,66 @@
+{
+  "id": "community.diagram-studio",
+  "name": "Diagram & Architecture Studio",
+  "version": "1.0.0",
+  "publisher": "community",
+  "license": "MIT",
+  "category": "Viewers",
+  "execution": "sandboxed-ui",
+  "description": "Offline read-write editor for Excalidraw, Draw.io, Mermaid, BPMN, Event Storming, Business Model Canvas, and Obsidian JSON Canvas diagrams with save conflict protection.",
+  "entry": "index.html",
+  "sandbox": {
+    "type": "iframe-opaque-origin",
+    "attributes": "allow-scripts",
+    "allowSameOrigin": false
+  },
+  "permissions": [
+    "editor:openedFile",
+    "editor:saveOpenedFile",
+    "files:exportCopy",
+    "theme:subscribe",
+    "storage:pluginScope"
+  ],
+  "contributes": {
+    "customEditors": [
+      {
+        "id": "diagram-studio-editor",
+        "title": "Diagram Studio",
+        "extensions": [
+          ".excalidraw",
+          ".drawio",
+          ".mmd",
+          ".mermaid",
+          ".bpmn",
+          ".storm",
+          ".bmc",
+          ".canvas"
+        ],
+        "editable": true,
+        "maxFileSizeBytes": 4194304
+      }
+    ],
+    "newFiles": [
+      {
+        "id": "new-excalidraw",
+        "title": "New Excalidraw Diagram",
+        "defaultFileName": "architecture.excalidraw",
+        "extension": ".excalidraw",
+        "content": "{\"type\":\"excalidraw\",\"version\":2,\"elements\":[]}\n"
+      },
+      {
+        "id": "new-mermaid",
+        "title": "New Mermaid Flowchart",
+        "defaultFileName": "diagram.mmd",
+        "extension": ".mmd",
+        "content": "flowchart LR\n  A[Client] --> B[Host]\n  B --> C[Sandbox]\n"
+      },
+      {
+        "id": "new-canvas",
+        "title": "New JSON Canvas Board",
+        "defaultFileName": "board.canvas",
+        "extension": ".canvas",
+        "content": "{\"nodes\":[],\"edges\":[]}\n"
+      }
+    ]
+  }
+}

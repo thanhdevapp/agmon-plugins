@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Line Blame &amp; PR Diff Breakdown</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<div class="shell">
+  <div class="bar">
+    <h1>Line Blame &amp; PR Breakdown</h1>
+    <input id="fileIn" class="input mono" style="width:220px;" value="package.json" placeholder="Relative file path..." aria-label="Relative file path" />
+    <input id="authorFilter" class="input" style="width:130px;" placeholder="Filter author..." aria-label="Filter author" />
+    <button class="btn primary" id="btnBlame"></button>
+    <button class="btn" id="btnPrev"></button>
+    <span id="rangeLabel" class="badge">L1-100</span>
+    <button class="btn" id="btnNext"></button>
+    <button class="btn" id="btnTour"></button>
+  </div>
+
+  <div class="workspace">
+    <section class="pane" aria-label="Line blame heatmap">
+      <div class="pane-head">
+        <span id="blameTitle">Line Blame (Age Heatmap · Click hash for PR diff)</span>
+        <span id="blameStats" class="badge">0 lines</span>
+      </div>
+      <div id="blameOut" class="scroll"></div>
+    </section>
+
+    <section class="pane" aria-label="Structured commit and PR breakdown">
+      <div class="pane-head">
+        <span>PR / Commit Diff Breakdown</span>
+        <span id="tourStats" class="badge">0 commits</span>
+      </div>
+      <div id="diffBreakdown" class="scroll" style="max-height:46%;border-bottom:1px solid var(--border);"></div>
+      <div id="tourOut" class="scroll"></div>
+    </section>
+  </div>
+
+  <div class="statusbar">
+    <span id="status" role="status" aria-live="polite">Connecting...</span>
+    <span>Zero-Lock Async Git · Security Path Risk Detector</span>
+  </div>
+</div>
+<script type="module" src="./main.js"></script>
+</body>
+</html>

@@ -5,7 +5,8 @@
   "type": "module",
   "description": "Open-source AGMon plugins, one folder per plugin.",
   "scripts": {
-    "test": "node --test plugins/git-log/git-log.test.cjs"
+    "test": "node --test plugins/*/*.test.mjs plugins/git-log/git-log.test.cjs",
+    "test:unit": "node --test plugins/*/*.test.mjs"
   },
   "devDependencies": {
     "playwright": "1.64.0"

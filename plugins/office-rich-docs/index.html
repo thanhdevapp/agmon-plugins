@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rich Docs, LaTeX & Office Viewer</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<div class="shell">
+  <div class="bar">
+    <h1 id="title">Rich Docs &amp; Office Viewer</h1>
+    <button class="btn" id="btnNarrow">Narrow Reader</button>
+    <button class="btn primary" id="btnSave">Save</button>
+    <span class="badge" id="status">Loading...</span>
+  </div>
+  <div class="body split">
+    <textarea id="src" class="input mono" style="width:100%;height:100%;resize:none;"></textarea>
+    <div id="preview" class="card" style="overflow:auto;height:100%;margin:0;line-height:1.6;"></div>
+  </div>
+</div>
+  <script src="./main.js"></script>
+</body>
+</html>

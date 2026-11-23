@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pomodoro & Offline Sidequest Arcade</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<div class="shell">
+  <div class="bar"><h1>Pomodoro &amp; Sidequest</h1><span class="badge" id="pomoClock">25:00</span><button class="btn primary" id="btnPomo">Start</button><button class="btn" id="btnReset">Reset</button></div>
+  <div class="body">
+    <div class="card row"><strong>Offline Snake (Arrow keys)</strong><span>Score: <strong id="score">0</strong> · Best: <strong id="best">0</strong></span></div>
+    <canvas id="game" width="240" height="240" style="display:block;margin:8px auto;border:1px solid var(--border-subtle,#272c38);border-radius:6px;background:#0b0e14;"></canvas>
+    <div class="muted" id="pauseNote" style="text-align:center;">Auto-pauses when an agent enters waiting/blocked state.</div>
+  </div>
+</div>
+  <script src="./main.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+{
+  "id": "community.github-solarized-theme",
+  "name": "GitHub & Solarized Pack",
+  "version": "1.0.0",
+  "publisher": "community",
+  "license": "MIT",
+  "category": "Themes",
+  "execution": "data",
+  "description": "GitHub Dark Dimmed, GitHub Light Default, Solarized Dark, and Solarized Light.",
+  "permissions": [],
+  "contributes": {
+    "themes": [
+      {
+        "id": "github-dark-dimmed",
+        "name": "GitHub Dark Dimmed",
+        "category": "dark",
+        "description": "Low-glare GitHub dimmed charcoal",
+        "tokens": {
+          "--bg-workbench": "#22272e",
+          "--bg-panel": "#1c2128",
+          "--bg-sidebar": "#1c2128",
+          "--bg-editor": "#22272e",
+          "--text-main": "#adbac7",
+          "--text-muted": "#768390",
+          "--border-subtle": "#373e47",
+          "--accent-primary": "#539bf5",
+          "--terminal-bg": "#1c2128"
+        }
+      },
+      {
+        "id": "github-light-default",
+        "name": "GitHub Light Default",
+        "category": "light",
+        "description": "Crisp GitHub white daylight palette",
+        "tokens": {
+          "--bg-workbench": "#ffffff",
+          "--bg-panel": "#f6f8fa",
+          "--bg-sidebar": "#f6f8fa",
+          "--bg-editor": "#ffffff",
+          "--text-main": "#1f2328",
+          "--text-muted": "#656d76",
+          "--border-subtle": "#d0d7de",
+          "--accent-primary": "#0969da",
+          "--terminal-bg": "#f6f8fa"
+        }
+      },
+      {
+        "id": "solarized-dark-classic",
+        "name": "Solarized Dark",
+        "category": "dark",
+        "description": "Precision CIELAB teal dark palette",
+        "tokens": {
+          "--bg-workbench": "#002b36",
+          "--bg-panel": "#073642",
+          "--bg-sidebar": "#073642",
+          "--bg-editor": "#002b36",
+          "--text-main": "#93a1a1",
+          "--text-muted": "#839496",
+          "--border-subtle": "#0d4a5a",
+          "--accent-primary": "#268bd2",
+          "--terminal-bg": "#002b36"
+        }
+      },
+      {
+        "id": "solarized-light-classic",
+        "name": "Solarized Light",
+        "category": "light",
+        "description": "Warm cream Solarized palette",
+        "tokens": {
+          "--bg-workbench": "#fdf6e3",
+          "--bg-panel": "#eee8d5",
+          "--bg-sidebar": "#eee8d5",
+          "--bg-editor": "#fdf6e3",
+          "--text-main": "#586e75",
+          "--text-muted": "#657b83",
+          "--border-subtle": "#d8d1be",
+          "--accent-primary": "#268bd2",
+          "--terminal-bg": "#fdf6e3"
+        }
+      }
+    ]
+  },
+  "entry": null,
+  "sandbox": {
+    "type": "none",
+    "attributes": "",
+    "allowSameOrigin": false
+  }
+}

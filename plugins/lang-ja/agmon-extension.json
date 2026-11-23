@@ -1,0 +1,39 @@
+{
+  "id": "community.lang-ja",
+  "name": "Japanese Language Pack",
+  "version": "1.0.0",
+  "publisher": "community",
+  "license": "MIT",
+  "category": "Other",
+  "execution": "data",
+  "description": "Zero-JS Japanese localization pack for AGMon Workbench navigation, Market, and status controls.",
+  "permissions": [],
+  "contributes": {
+    "languagePacks": [
+      {
+        "locale": "ja",
+        "label": "Japanese (ja-JP)",
+        "strings": {
+          "workbench.welcome": "AGMon he youkoso",
+          "workbench.extensions": "Kakuchou kinou",
+          "workbench.market": "Plugin Market",
+          "workbench.installed": "Install zumi",
+          "workbench.settings": "Settei",
+          "workbench.terminal": "Terminal",
+          "workbench.tasks": "Task Kanri",
+          "workbench.files": "File",
+          "workbench.prChecks": "PR & Checks",
+          "status.needsYou": "Kakunin machi",
+          "status.working": "Jikkou chuu",
+          "status.ready": "Junbi kanryou"
+        }
+      }
+    ]
+  },
+  "entry": null,
+  "sandbox": {
+    "type": "none",
+    "attributes": "",
+    "allowSameOrigin": false
+  }
+}

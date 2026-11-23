@@ -1,0 +1,72 @@
+{
+  "id": "community.dracula-gruvbox-theme",
+  "name": "Dracula & Gruvbox Pack",
+  "version": "1.0.0",
+  "publisher": "community",
+  "license": "MIT",
+  "category": "Themes",
+  "execution": "data",
+  "description": "Classic Dracula dark plus Gruvbox Dark Hard and Gruvbox Light retro palettes.",
+  "permissions": [],
+  "contributes": {
+    "themes": [
+      {
+        "id": "dracula-classic",
+        "name": "Dracula Classic",
+        "category": "dark",
+        "description": "Vivid purple and pink dark palette",
+        "tokens": {
+          "--bg-workbench": "#282a36",
+          "--bg-panel": "#21222c",
+          "--bg-sidebar": "#21222c",
+          "--bg-editor": "#282a36",
+          "--text-main": "#f8f8f2",
+          "--text-muted": "#9ea8d6",
+          "--border-subtle": "#44475a",
+          "--accent-primary": "#bd93f9",
+          "--terminal-bg": "#191a21"
+        }
+      },
+      {
+        "id": "gruvbox-dark-hard",
+        "name": "Gruvbox Dark Hard",
+        "category": "dark",
+        "description": "Retro groove warm charcoal",
+        "tokens": {
+          "--bg-workbench": "#1d2021",
+          "--bg-panel": "#282828",
+          "--bg-sidebar": "#1d2021",
+          "--bg-editor": "#1d2021",
+          "--text-main": "#ebdbb2",
+          "--text-muted": "#bdae93",
+          "--border-subtle": "#3c3836",
+          "--accent-primary": "#fabd2f",
+          "--terminal-bg": "#1d2021"
+        }
+      },
+      {
+        "id": "gruvbox-light-soft",
+        "name": "Gruvbox Light",
+        "category": "light",
+        "description": "Warm parchment daylight palette",
+        "tokens": {
+          "--bg-workbench": "#fbf1c7",
+          "--bg-panel": "#f2e5bc",
+          "--bg-sidebar": "#f2e5bc",
+          "--bg-editor": "#fbf1c7",
+          "--text-main": "#3c3836",
+          "--text-muted": "#665c54",
+          "--border-subtle": "#d5c4a1",
+          "--accent-primary": "#b57614",
+          "--terminal-bg": "#f9f5d7"
+        }
+      }
+    ]
+  },
+  "entry": null,
+  "sandbox": {
+    "type": "none",
+    "attributes": "",
+    "allowSameOrigin": false
+  }
+}

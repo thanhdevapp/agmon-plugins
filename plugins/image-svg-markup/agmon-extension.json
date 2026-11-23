@@ -1,0 +1,38 @@
+{
+  "id": "community.image-svg-markup",
+  "name": "Image & SVG Markup",
+  "version": "1.0.0",
+  "publisher": "community",
+  "license": "MIT",
+  "category": "Viewers",
+  "execution": "sandboxed-ui",
+  "description": "Annotate images and SVGs offline with highlight boxes, arrows, numbered steps, and solid-box PII/secret redaction, then export a copy.",
+  "entry": "index.html",
+  "sandbox": {
+    "type": "iframe-opaque-origin",
+    "attributes": "allow-scripts",
+    "allowSameOrigin": false
+  },
+  "permissions": [
+    "editor:openedFile",
+    "files:exportCopy",
+    "theme:subscribe"
+  ],
+  "contributes": {
+    "customEditors": [
+      {
+        "id": "image-markup-editor",
+        "title": "Image & SVG Markup",
+        "extensions": [
+          ".png",
+          ".jpg",
+          ".jpeg",
+          ".webp",
+          ".gif",
+          ".svg"
+        ],
+        "maxFileSizeBytes": 8388608
+      }
+    ]
+  }
+}

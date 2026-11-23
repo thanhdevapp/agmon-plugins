@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Image &amp; SVG Markup Studio</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<div class="shell">
+  <div class="bar" role="toolbar" aria-label="Markup tools">
+    <span id="title" class="title">Image &amp; SVG Markup</span>
+    <div id="toolButtons" style="display:flex;gap:4px;flex-wrap:wrap;"></div>
+    <div class="sep"></div>
+    <div id="swatches" style="display:flex;gap:4px;align-items:center;" aria-label="Colors"></div>
+    <div class="sep"></div>
+    <button class="btn" id="btnUndo" type="button" title="Undo (Cmd/Ctrl+Z)"></button>
+    <button class="btn" id="btnRedo" type="button" title="Redo (Cmd/Ctrl+Shift+Z)"></button>
+    <button class="btn" id="btnClear" type="button" title="Clear all shapes"></button>
+    <button class="btn primary" id="btnExport" type="button" style="margin-left:auto;"></button>
+  </div>
+  <div class="stage-wrap">
+    <canvas id="stage" width="840" height="480" aria-label="Image annotation canvas"></canvas>
+  </div>
+  <div class="statusbar">
+    <span id="status" role="status" aria-live="polite">Ready</span>
+    <span>Keys: V Select · P Pen · H Highlight · A Arrow · R Box · O Ellipse · T Text · N Step · X Redact</span>
+  </div>
+</div>
+<script type="module" src="./main.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{
+  "id": "community.prompt-snippets-council",
+  "name": "AI Council, Prompt Enhancer & Snippets",
+  "version": "1.0.0",
+  "publisher": "community",
+  "license": "MIT",
+  "category": "Developer Tools",
+  "execution": "sandboxed-ui",
+  "description": "5-level project-aware prompt enhancer, reusable command/prompt snippets library, and Blind Multi-Model Council roundtable rubric composer.",
+  "entry": "index.html",
+  "sandbox": {
+    "type": "iframe-opaque-origin",
+    "attributes": "allow-scripts",
+    "allowSameOrigin": false
+  },
+  "permissions": [
+    "storage:pluginScope",
+    "workspace:readSummary",
+    "notifications:toast",
+    "theme:subscribe"
+  ],
+  "contributes": {
+    "sidebarPanels": [
+      {
+        "id": "council-prompts",
+        "title": "Council & Prompts",
+        "icon": "Sparkles",
+        "position": "right"
+      }
+    ]
+  }
+}

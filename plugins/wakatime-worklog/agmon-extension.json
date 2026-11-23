@@ -1,0 +1,41 @@
+{
+  "id": "community.wakatime-worklog",
+  "name": "Coding Worklog & Activity Calendar",
+  "version": "1.0.0",
+  "publisher": "community",
+  "license": "MIT",
+  "category": "Monitoring",
+  "execution": "sandboxed-ui",
+  "description": "Track daily human + AI agent coding minutes per project/model, show today's total in the status bar, and export daily Markdown standup worklogs.",
+  "entry": "index.html",
+  "sandbox": {
+    "type": "iframe-opaque-origin",
+    "attributes": "allow-scripts",
+    "allowSameOrigin": false
+  },
+  "permissions": [
+    "traces:subscribe",
+    "storage:pluginScope",
+    "statusBar:update",
+    "files:exportCopy",
+    "theme:subscribe"
+  ],
+  "contributes": {
+    "sidebarPanels": [
+      {
+        "id": "worklog",
+        "title": "Worklog",
+        "icon": "Clock",
+        "position": "right"
+      }
+    ],
+    "statusBarItems": [
+      {
+        "id": "today-time",
+        "text": "Today: 0m",
+        "tooltip": "Tracked coding & agent time today",
+        "alignment": "right"
+      }
+    ]
+  }
+}

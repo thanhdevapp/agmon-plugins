@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Offline Dev Toolbox (17 Utilities)</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<div class="shell">
+  <div class="bar">
+    <h1>Offline Dev Toolbox (17 Tools)</h1>
+    <select id="toolSel" aria-label="Select developer tool">
+      <option value="jwt">JWT Decoder</option>
+      <option value="secret-redact">Secret Redactor (PII/Keys)</option>
+      <option value="llm-tokens">LLM Token &amp; Cost Counter</option>
+      <option value="ansi-clean">ANSI Log Cleaner</option>
+      <option value="json">JSON Pretty / Minify</option>
+      <option value="jsondiff">Structural JSON Diff</option>
+      <option value="b64">Base64 Codec</option>
+      <option value="url">URL &amp; Query Parser</option>
+      <option value="regex">Regex Tester</option>
+      <option value="hash">SHA-256 / SHA-512 Hash</option>
+      <option value="uuid">UUID / Nanoid Batch</option>
+      <option value="cron">Cron Human Explainer</option>
+      <option value="timestamp">Unix Timestamp Converter</option>
+      <option value="docker">Docker run to Compose</option>
+      <option value="contrast">WCAG AA/AAA Contrast</option>
+      <option value="chmod">chmod Calculator</option>
+      <option value="cidr">CIDR Subnet Calculator</option>
+    </select>
+    <button class="btn primary" id="btnRun"></button>
+  </div>
+  <div class="layout">
+    <aside class="side" id="toolList" aria-label="Tool shortcuts"></aside>
+    <main class="main">
+      <textarea id="inA" class="input mono" style="width:100%;height:110px;" placeholder="Primary input..."></textarea>
+      <textarea id="inB" class="input mono" style="width:100%;height:70px;" placeholder="Secondary input (right JSON for Diff, test text for Regex, #bg hex for Contrast)..."></textarea>
+      <div id="swatchBar" class="swatch-bar" hidden>Sample Contrast Preview Aa Bb 123</div>
+      <pre id="out" class="card mono"></pre>
+    </main>
+  </div>
+</div>
+<script type="module" src="./main.js"></script>
+</body>
+</html>

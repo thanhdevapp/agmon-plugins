@@ -1,0 +1,31 @@
+{
+  "id": "community.context-hygiene-doctor",
+  "name": "Context Ballast, Hygiene & Test Queue",
+  "version": "1.0.0",
+  "publisher": "community",
+  "license": "MIT",
+  "category": "Developer Tools",
+  "execution": "sandboxed-ui",
+  "description": "Inspect AGENTS.md/CLAUDE.md/skills context token weight, detect stale doc path references and dirty worktrees, and coordinate machine-wide Test Queue leases.",
+  "entry": "index.html",
+  "sandbox": {
+    "type": "iframe-opaque-origin",
+    "attributes": "allow-scripts",
+    "allowSameOrigin": false
+  },
+  "permissions": [
+    "workspace:hygiene",
+    "execution:testQueue",
+    "theme:subscribe"
+  ],
+  "contributes": {
+    "sidebarPanels": [
+      {
+        "id": "hygiene",
+        "title": "Hygiene & Queue",
+        "icon": "ShieldCheck",
+        "position": "right"
+      }
+    ]
+  }
+}

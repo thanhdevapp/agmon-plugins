@@ -1,0 +1,54 @@
+{
+  "id": "community.sound-presence-bridge",
+  "name": "Audio Alerts & Presence Configurator",
+  "version": "1.0.0",
+  "publisher": "community",
+  "license": "MIT",
+  "category": "Monitoring",
+  "execution": "sandboxed-ui",
+  "description": "Offline Web Audio API sound alert packs on agent completion/waiting plus opt-in Stream Deck & Discord Presence state payload generator.",
+  "entry": "index.html",
+  "sandbox": {
+    "type": "iframe-opaque-origin",
+    "attributes": "allow-scripts",
+    "allowSameOrigin": false
+  },
+  "permissions": [
+    "traces:subscribe",
+    "settings:pluginScope",
+    "notifications:toast",
+    "theme:subscribe"
+  ],
+  "contributes": {
+    "sidebarPanels": [
+      {
+        "id": "audio-presence",
+        "title": "Audio & Presence",
+        "icon": "Volume2",
+        "position": "right"
+      }
+    ],
+    "settings": [
+      {
+        "key": "soundPack",
+        "title": "Alert Sound Pack",
+        "type": "enum",
+        "default": "chime",
+        "options": [
+          "chime",
+          "arcade",
+          "sonar",
+          "muted"
+        ],
+        "description": ""
+      },
+      {
+        "key": "shareProjectName",
+        "title": "Include Project Name in Presence",
+        "type": "boolean",
+        "default": false,
+        "description": ""
+      }
+    ]
+  }
+}

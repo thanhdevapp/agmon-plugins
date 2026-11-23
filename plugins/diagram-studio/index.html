@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Diagram &amp; Architecture Studio</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<div class="shell">
+  <div class="bar" role="toolbar" aria-label="Diagram tools">
+    <h1 id="title">Diagram Studio</h1>
+    <div class="tool-group">
+      <button class="btn" id="btnAddRect" title="Add service rectangle"></button>
+      <button class="btn" id="btnAddDiamond" title="Add decision diamond"></button>
+      <button class="btn" id="btnAddDb" title="Add database cylinder"></button>
+      <button class="btn" id="btnAddSticky" title="Add sticky note"></button>
+      <button class="btn" id="btnConnect" title="Connect selected node to next node"></button>
+      <button class="btn danger" id="btnDelete" title="Delete selected node (Del)"></button>
+    </div>
+    <div class="tool-group">
+      <button class="btn" id="btnUndo" title="Undo (Ctrl/Cmd+Z)"></button>
+      <button class="btn" id="btnRedo" title="Redo (Ctrl/Cmd+Shift+Z)"></button>
+    </div>
+    <div class="tool-group">
+      <button class="btn" id="btnZoomOut" title="Zoom out"></button>
+      <span id="zoomLabel" class="badge">100%</span>
+      <button class="btn" id="btnZoomIn" title="Zoom in"></button>
+      <button class="btn" id="btnThemeBg" title="Toggle light/dark canvas"></button>
+    </div>
+    <button class="btn" id="btnExport" title="Export clean SVG"></button>
+    <button class="btn primary" id="btnSave" title="Atomic save with conflict guard"></button>
+  </div>
+
+  <div id="conflictBanner" class="conflict-banner" hidden>
+    <span id="conflictText">File was modified externally on disk.</span>
+    <button class="btn" id="btnReloadDisk">Reload Disk Version</button>
+  </div>
+
+  <div class="workspace">
+    <section class="pane" aria-label="Interactive vector canvas">
+      <div class="pane-head">
+        <span>Interactive Canvas (Drag nodes · Double-click to rename · Scroll to zoom)</span>
+        <span id="nodeStats" class="badge">0 nodes · 0 edges</span>
+      </div>
+      <div class="canvas-wrap" id="canvasWrap">
+        <svg id="canvas" viewBox="0 0 760 460" role="img" aria-label="Architecture diagram canvas"></svg>
+      </div>
+    </section>
+
+    <section class="pane" aria-label="Document source">
+      <div class="pane-head">
+        <span>Document Source (Excalidraw / Mermaid / JSON Canvas)</span>
+        <span id="formatBadge" class="badge">excalidraw</span>
+      </div>
+      <textarea id="source" spellcheck="false" aria-label="Diagram source text"></textarea>
+    </section>
+  </div>
+
+  <div class="statusbar">
+    <span id="status" role="status" aria-live="polite">Connecting...</span>
+    <span id="hint">Snap: 10px · Zero-innerHTML SVG Engine</span>
+  </div>
+</div>
+<script type="module" src="./main.js"></script>
+</body>
+</html>

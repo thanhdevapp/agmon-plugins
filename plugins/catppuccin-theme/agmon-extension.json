@@ -1,0 +1,89 @@
+{
+  "id": "community.catppuccin-theme",
+  "name": "Catppuccin Themes",
+  "version": "1.0.0",
+  "publisher": "community",
+  "license": "MIT",
+  "category": "Themes",
+  "execution": "data",
+  "description": "Soothing pastel Catppuccin palettes (Mocha, Macchiato, Frappe, Latte) with matching terminal tokens.",
+  "permissions": [],
+  "contributes": {
+    "themes": [
+      {
+        "id": "catppuccin-mocha",
+        "name": "Catppuccin Mocha",
+        "category": "dark",
+        "description": "Deep soothing dark pastel",
+        "tokens": {
+          "--bg-workbench": "#1e1e2e",
+          "--bg-panel": "#181825",
+          "--bg-sidebar": "#181825",
+          "--bg-editor": "#1e1e2e",
+          "--text-main": "#cdd6f4",
+          "--text-muted": "#a6adc8",
+          "--border-subtle": "#313244",
+          "--accent-primary": "#cba6f7",
+          "--terminal-bg": "#11111b"
+        }
+      },
+      {
+        "id": "catppuccin-macchiato",
+        "name": "Catppuccin Macchiato",
+        "category": "dark",
+        "description": "Balanced medium dark pastel",
+        "tokens": {
+          "--bg-workbench": "#24273a",
+          "--bg-panel": "#1e2030",
+          "--bg-sidebar": "#1e2030",
+          "--bg-editor": "#24273a",
+          "--text-main": "#cad3f5",
+          "--text-muted": "#a5adcb",
+          "--border-subtle": "#363a4f",
+          "--accent-primary": "#c6a0f6",
+          "--terminal-bg": "#181926"
+        }
+      },
+      {
+        "id": "catppuccin-frappe",
+        "name": "Catppuccin Frappe",
+        "category": "dark",
+        "description": "Soft twilight pastel",
+        "tokens": {
+          "--bg-workbench": "#303446",
+          "--bg-panel": "#292c3c",
+          "--bg-sidebar": "#292c3c",
+          "--bg-editor": "#303446",
+          "--text-main": "#c6d0f5",
+          "--text-muted": "#a5adce",
+          "--border-subtle": "#414559",
+          "--accent-primary": "#ca9ee6",
+          "--terminal-bg": "#232634"
+        }
+      },
+      {
+        "id": "catppuccin-latte",
+        "name": "Catppuccin Latte",
+        "category": "light",
+        "description": "Warm crisp daylight pastel",
+        "tokens": {
+          "--bg-workbench": "#eff1f5",
+          "--bg-panel": "#e6e9ef",
+          "--bg-sidebar": "#e6e9ef",
+          "--bg-editor": "#eff1f5",
+          "--text-main": "#4c4f69",
+          "--text-muted": "#6c6f85",
+          "--border-subtle": "#ccd0da",
+          "--accent-primary": "#8839ef",
+          "--terminal-bg": "#dce0e8"
+        }
+      }
+    ]
+  },
+  "entry": null,
+  "sandbox": {
+    "type": "none",
+    "attributes": "",
+    "allowSameOrigin": false
+  }
+}

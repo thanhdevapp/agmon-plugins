@@ -1,0 +1,30 @@
+{
+  "id": "community.sandbox-recipes-infra",
+  "name": "Docker, K8s & Sandbox VM Recipes",
+  "version": "1.0.0",
+  "publisher": "community",
+  "license": "MIT",
+  "category": "Developer Tools",
+  "execution": "sandboxed-ui",
+  "description": "Generate disposable workspace isolation recipes (Docker DevContainer, Multipass VM, Lima VM, Fly Sprites, Firecracker, Kubernetes Pod spec) and export directly.",
+  "entry": "index.html",
+  "sandbox": {
+    "type": "iframe-opaque-origin",
+    "attributes": "allow-scripts",
+    "allowSameOrigin": false
+  },
+  "permissions": [
+    "files:exportCopy",
+    "theme:subscribe"
+  ],
+  "contributes": {
+    "sidebarPanels": [
+      {
+        "id": "vm-recipes",
+        "title": "VM Recipes",
+        "icon": "Container",
+        "position": "right"
+      }
+    ]
+  }
+}

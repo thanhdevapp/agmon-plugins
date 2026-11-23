@@ -1,0 +1,30 @@
+{
+  "id": "community.git-blame-pr-tour",
+  "name": "Line Blame & PR Diff Breakdown",
+  "version": "1.0.0",
+  "publisher": "community",
+  "license": "MIT",
+  "category": "Developer Tools",
+  "execution": "sandboxed-ui",
+  "description": "GitLens-style line blame inspector and structured commit/PR tour grouped by runtime, tests, docs, and config using zero-lock Git history RPC.",
+  "entry": "index.html",
+  "sandbox": {
+    "type": "iframe-opaque-origin",
+    "attributes": "allow-scripts",
+    "allowSameOrigin": false
+  },
+  "permissions": [
+    "git:readHistory",
+    "theme:subscribe"
+  ],
+  "contributes": {
+    "sidebarPanels": [
+      {
+        "id": "blame-tour",
+        "title": "Blame & PR Tour",
+        "icon": "GitCommit",
+        "position": "right"
+      }
+    ]
+  }
+}

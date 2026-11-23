@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Docker, K8s & Sandbox VM Recipes</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<div class="shell">
+  <div class="bar"><h1>Sandbox &amp; VM Recipes</h1><select id="kind"><option value="docker">Docker Worktree Sandbox</option><option value="multipass">Multipass Ubuntu VM</option><option value="lima">Lima macOS VM</option><option value="k8s">Kubernetes Dev Pod</option></select><button class="btn primary" id="btnExport">Export</button></div>
+  <div class="body"><pre id="recipe" class="card mono" style="white-space:pre-wrap;"></pre></div>
+</div>
+  <script src="./main.js"></script>
+</body>
+</html>

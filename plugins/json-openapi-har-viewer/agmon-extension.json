@@ -1,0 +1,35 @@
+{
+  "id": "community.json-openapi-har-viewer",
+  "name": "JSON Graph, OpenAPI & HAR Waterfall",
+  "version": "1.0.0",
+  "publisher": "community",
+  "license": "MIT",
+  "category": "Viewers",
+  "execution": "sandboxed-ui",
+  "description": "Interactive JSON/YAML collapsible tree explorer, OpenAPI 3 endpoint browser, and HAR HTTP network waterfall viewer.",
+  "entry": "index.html",
+  "sandbox": {
+    "type": "iframe-opaque-origin",
+    "attributes": "allow-scripts",
+    "allowSameOrigin": false
+  },
+  "permissions": [
+    "editor:openedFile",
+    "theme:subscribe"
+  ],
+  "contributes": {
+    "customEditors": [
+      {
+        "id": "json-openapi-har",
+        "title": "JSON / OpenAPI / HAR Viewer",
+        "extensions": [
+          ".jsonc",
+          ".yaml",
+          ".yml",
+          ".har"
+        ],
+        "maxFileSizeBytes": 4194304
+      }
+    ]
+  }
+}

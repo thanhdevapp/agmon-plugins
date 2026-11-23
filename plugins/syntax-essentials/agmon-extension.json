@@ -1,0 +1,129 @@
+{
+  "id": "community.syntax-essentials",
+  "name": "Essential Syntax Grammars Pack",
+  "version": "1.0.0",
+  "publisher": "community",
+  "license": "MIT",
+  "category": "Developer Tools",
+  "execution": "data",
+  "description": "Declarative syntax declarations for Prisma, HTTP/REST, Nix, LaTeX, systemd/Quadlet, GraphQL, Godot GDScript, and Jsonnet.",
+  "permissions": [],
+  "contributes": {
+    "syntaxes": [
+      {
+        "id": "prisma",
+        "scopeName": "source.prisma",
+        "label": "Prisma Schema",
+        "extensions": [
+          ".prisma"
+        ]
+      },
+      {
+        "id": "http",
+        "scopeName": "source.http",
+        "label": "HTTP Request",
+        "extensions": [
+          ".http",
+          ".rest"
+        ]
+      },
+      {
+        "id": "nix",
+        "scopeName": "source.nix",
+        "label": "Nix Expression",
+        "extensions": [
+          ".nix"
+        ]
+      },
+      {
+        "id": "latex",
+        "scopeName": "text.tex.latex",
+        "label": "LaTeX",
+        "extensions": [
+          ".tex",
+          ".ltx",
+          ".sty"
+        ]
+      },
+      {
+        "id": "systemd",
+        "scopeName": "source.systemd",
+        "label": "systemd / Quadlet",
+        "extensions": [
+          ".service",
+          ".socket",
+          ".timer",
+          ".container",
+          ".kube"
+        ]
+      },
+      {
+        "id": "graphql",
+        "scopeName": "source.graphql",
+        "label": "GraphQL",
+        "extensions": [
+          ".graphql",
+          ".gql"
+        ]
+      },
+      {
+        "id": "gdscript",
+        "scopeName": "source.gdscript",
+        "label": "Godot GDScript",
+        "extensions": [
+          ".gd",
+          ".tscn",
+          ".gdshader"
+        ]
+      },
+      {
+        "id": "jsonnet",
+        "scopeName": "source.jsonnet",
+        "label": "Jsonnet",
+        "extensions": [
+          ".jsonnet",
+          ".libsonnet"
+        ]
+      },
+      {
+        "id": "gleam",
+        "scopeName": "source.gleam",
+        "label": "Gleam",
+        "extensions": [
+          ".gleam"
+        ]
+      },
+      {
+        "id": "vhdl",
+        "scopeName": "source.vhdl",
+        "label": "VHDL",
+        "extensions": [
+          ".vhd",
+          ".vhdl"
+        ]
+      },
+      {
+        "id": "vcl",
+        "scopeName": "source.vcl",
+        "label": "Varnish VCL",
+        "extensions": [
+          ".vcl"
+        ]
+      },
+      {
+        "id": "qml",
+        "scopeName": "source.qml",
+        "label": "Qt QML",
+        "extensions": [
+          ".qml"
+        ]
+      }
+    ]
+  },
+  "entry": null,
+  "sandbox": {
+    "type": "none",
+    "attributes": "",
+    "allowSameOrigin": false
+  }
+}

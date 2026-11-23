@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JSON Tree, OpenAPI &amp; HAR Waterfall Viewer</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<div class="shell">
+  <div class="bar">
+    <h1 id="title">JSON / OpenAPI / HAR Viewer</h1>
+    <select id="methodFilter" hidden>
+      <option value="">All Methods</option>
+      <option value="GET">GET</option>
+      <option value="POST">POST</option>
+      <option value="PUT">PUT</option>
+      <option value="PATCH">PATCH</option>
+      <option value="DELETE">DELETE</option>
+    </select>
+    <input id="filter" class="input" type="search" placeholder="Filter keys, endpoints, or URLs..." />
+    <button class="btn" id="btnToggleTree">Toggle Tree</button>
+    <span id="modeBadge" class="badge">JSON</span>
+    <span id="status" class="badge">Loading...</span>
+  </div>
+  <div class="crumb">
+    <span id="pathCrumb">$</span>
+    <span id="summaryMeta" class="muted">Click any node to inspect JSONPath</span>
+  </div>
+  <div id="root" class="body"></div>
+</div>
+<script type="module" src="./main.js"></script>
+</body>
+</html>

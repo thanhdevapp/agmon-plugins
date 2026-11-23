@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Agent Control Room, Subagent DAG &amp; Pitwall HUD</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<div class="shell">
+  <div class="bar">
+    <h1>Agent Control Room &amp; Pitwall HUD</h1>
+    <div class="tabs" role="tablist">
+      <button class="tab-btn active" data-filter="all" role="tab">All</button>
+      <button class="tab-btn" data-filter="waiting" role="tab">Needs You</button>
+      <button class="tab-btn" data-filter="active" role="tab">Working</button>
+    </div>
+    <button class="btn" id="btnRefresh"></button>
+    <span id="summary" class="badge">0 agents</span>
+  </div>
+
+  <div class="body">
+    <div class="grid-top">
+      <section id="inbox" class="card" aria-label="Decision Gate Inbox"></section>
+      <section class="card" aria-label="Live Subagent Delegation DAG">
+        <div class="card-title">
+          <span>Live Subagent Delegation DAG</span>
+          <span id="dagBadge" class="badge">0 nodes</span>
+        </div>
+        <div class="dag-wrap">
+          <svg id="dagSvg" width="100%" height="145" viewBox="0 0 560 145" role="img" aria-label="Subagent delegation graph"></svg>
+        </div>
+      </section>
+    </div>
+
+    <section id="agents" class="card" aria-label="Live Pitwall & Token Burn"></section>
+    <section id="metrics" class="card" aria-label="Skill & MCP Ecosystem Telemetry"></section>
+  </div>
+</div>
+<script type="module" src="./main.js"></script>
+</body>
+</html>

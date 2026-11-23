@@ -1,0 +1,72 @@
+{
+  "id": "community.tokyo-night-theme",
+  "name": "Tokyo Night Suite",
+  "version": "1.0.0",
+  "publisher": "community",
+  "license": "MIT",
+  "category": "Themes",
+  "execution": "data",
+  "description": "Tokyo Night, Tokyo Night Storm, and Tokyo Night Day palettes with matching terminal backgrounds.",
+  "permissions": [],
+  "contributes": {
+    "themes": [
+      {
+        "id": "tokyo-night-deep",
+        "name": "Tokyo Night Deep",
+        "category": "dark",
+        "description": "Midnight neon indigo",
+        "tokens": {
+          "--bg-workbench": "#1a1b26",
+          "--bg-panel": "#16161e",
+          "--bg-sidebar": "#16161e",
+          "--bg-editor": "#1a1b26",
+          "--text-main": "#c0caf5",
+          "--text-muted": "#9aa5ce",
+          "--border-subtle": "#292e42",
+          "--accent-primary": "#7aa2f7",
+          "--terminal-bg": "#15161e"
+        }
+      },
+      {
+        "id": "tokyo-night-storm",
+        "name": "Tokyo Night Storm",
+        "category": "dark",
+        "description": "Blue-slate storm variant",
+        "tokens": {
+          "--bg-workbench": "#24283b",
+          "--bg-panel": "#1f2335",
+          "--bg-sidebar": "#1f2335",
+          "--bg-editor": "#24283b",
+          "--text-main": "#c0caf5",
+          "--text-muted": "#9aa5ce",
+          "--border-subtle": "#3b4261",
+          "--accent-primary": "#7aa2f7",
+          "--terminal-bg": "#1d202f"
+        }
+      },
+      {
+        "id": "tokyo-night-day",
+        "name": "Tokyo Night Day",
+        "category": "light",
+        "description": "Clean daylight slate",
+        "tokens": {
+          "--bg-workbench": "#e1e2e7",
+          "--bg-panel": "#d5d6db",
+          "--bg-sidebar": "#d5d6db",
+          "--bg-editor": "#e1e2e7",
+          "--text-main": "#3760bf",
+          "--text-muted": "#6172b0",
+          "--border-subtle": "#c4c8da",
+          "--accent-primary": "#2e7de9",
+          "--terminal-bg": "#e9e9ed"
+        }
+      }
+    ]
+  },
+  "entry": null,
+  "sandbox": {
+    "type": "none",
+    "attributes": "",
+    "allowSameOrigin": false
+  }
+}

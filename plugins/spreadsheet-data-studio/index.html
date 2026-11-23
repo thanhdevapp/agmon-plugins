@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spreadsheet &amp; SQLite Studio</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<div class="shell">
+  <div class="bar" role="toolbar" aria-label="Spreadsheet and SQLite tools">
+    <h1 id="title">Data Studio</h1>
+    <input id="filter" class="input" type="search" placeholder="Filter rows..." aria-label="Filter rows" />
+    <button class="btn" id="btnAddRow"></button>
+    <button class="btn" id="btnAddCol"></button>
+    <button class="btn" id="btnUndo"></button>
+    <button class="btn" id="btnExportCsv"></button>
+    <button class="btn primary" id="btnSave"></button>
+  </div>
+  <div id="formulaBar" class="formula-bar">
+    <span id="cellRef" class="cell-ref">A1</span>
+    <input id="formulaInput" class="input mono" style="flex:1;" placeholder="Select a cell to view/edit value or formula (=SUM, =AVG, =MIN, =MAX, =COUNT, =MEDIAN, =IF, =B2*C2)" />
+  </div>
+  <div id="content" class="body"></div>
+  <div class="statusbar">
+    <span id="status" role="status" aria-live="polite">Connecting...</span>
+    <span id="meta">Formula Engine + Read-Only SQLite Browser</span>
+  </div>
+</div>
+<script type="module" src="./main.js"></script>
+</body>
+</html>

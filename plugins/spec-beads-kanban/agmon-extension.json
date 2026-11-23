@@ -1,0 +1,32 @@
+{
+  "id": "community.spec-beads-kanban",
+  "name": "Spec-Kit, OpenSpec & Beads Board",
+  "version": "1.0.0",
+  "publisher": "community",
+  "license": "MIT",
+  "category": "Monitoring",
+  "execution": "sandboxed-ui",
+  "description": "Unified sidebar board detecting .specify/, openspec/, .beads/, and plans/ directories alongside live AGMon 5-lane Kanban tasks.",
+  "entry": "index.html",
+  "sandbox": {
+    "type": "iframe-opaque-origin",
+    "attributes": "allow-scripts",
+    "allowSameOrigin": false
+  },
+  "permissions": [
+    "tasks:read",
+    "workspace:hygiene",
+    "workspace:readSummary",
+    "theme:subscribe"
+  ],
+  "contributes": {
+    "sidebarPanels": [
+      {
+        "id": "spec-board",
+        "title": "Specs & Beads",
+        "icon": "ListChecks",
+        "position": "right"
+      }
+    ]
+  }
+}

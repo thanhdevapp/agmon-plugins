@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DB &amp; Local API Workbench</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+<div class="shell">
+  <div class="bar">
+    <h1>DB &amp; Local API Workbench</h1>
+    <div class="tabs" role="tablist">
+      <button id="tabSql" class="tab-btn active" role="tab" aria-selected="true"></button>
+      <button id="tabHttp" class="tab-btn" role="tab" aria-selected="false"></button>
+    </div>
+    <button class="btn" id="btnSave"></button>
+    <button class="btn" id="btnExport"></button>
+  </div>
+
+  <div class="body">
+    <section id="paneSql" class="pane">
+      <div class="card">
+        <div class="row between" style="margin-bottom:6px;">
+          <strong>Workspace SQLite Explorer (Read-Only)</strong>
+          <button class="btn" id="btnScanDbs"></button>
+        </div>
+        <div class="row" style="margin-bottom:6px;">
+          <select id="dbSelect" style="flex:1;"></select>
+          <select id="tableSelect" style="flex:1;"></select>
+        </div>
+        <input id="qName" class="input" style="width:100%;margin-bottom:6px;" placeholder="Saved query name..." />
+        <textarea id="qBody" class="input mono" style="width:100%;height:96px;" placeholder="SELECT name, type FROM sqlite_master WHERE type='table' LIMIT 50;"></textarea>
+        <div class="row between" style="margin-top:6px;">
+          <span id="sqlMeta" class="badge">Read-only SELECT/PRAGMA/EXPLAIN</span>
+          <button class="btn primary" id="btnRunSql"></button>
+        </div>
+      </div>
+      <div class="card" style="margin-top:8px;">
+        <div class="row between" style="margin-bottom:6px;">
+          <strong>Query Result</strong>
+          <div class="row">
+            <input id="resultFilter" class="input mono" style="width:170px;" placeholder="Filter (>10, =ok, null, text)" aria-label="Filter result rows" />
+            <button class="btn" id="btnCsvExport" type="button">CSV</button>
+          </div>
+        </div>
+        <div id="sqlResult" class="table-wrap"></div>
+        <div id="cellInspector" class="resp" style="margin-top:6px;max-height:84px;" hidden></div>
+      </div>
+    </section>
+
+    <section id="paneHttp" class="pane" hidden>
+      <div class="card">
+        <div class="row" style="margin-bottom:6px;">
+          <select id="httpMethod">
+            <option value="GET">GET</option>
+            <option value="POST">POST</option>
+            <option value="PUT">PUT</option>
+            <option value="PATCH">PATCH</option>
+            <option value="DELETE">DELETE</option>
+          </select>
+          <input id="httpUrl" class="input mono" style="flex:1;" value="http://127.0.0.1:4000/health" placeholder="http://127.0.0.1:<port>/path (loopback dev server only)" />
+          <button class="btn primary" id="btnSendHttp"></button>
+        </div>
+        <textarea id="httpHeaders" class="input mono" style="width:100%;height:48px;margin-bottom:6px;" placeholder='{"Accept": "application/json"}'></textarea>
+        <textarea id="httpBody" class="input mono" style="width:100%;height:74px;" placeholder='Optional JSON or GraphQL request body...'></textarea>
+      </div>
+      <div class="card" style="margin-top:8px;">
+        <div class="row between" style="margin-bottom:6px;">
+          <strong>HTTP Response</strong>
+          <span id="httpMeta" class="badge">Loopback-only (AGMon port &amp; SSRF blocked)</span>
+        </div>
+        <pre id="httpResp" class="resp">Send a request to a local dev server (e.g. localhost:4000 / localhost:5173 / localhost:8000).</pre>
+      </div>
+    </section>
+
+    <div class="card">
+      <strong style="display:block;margin-bottom:6px;">Saved Queries &amp; Collections</strong>
+      <div id="savedList"></div>
+    </div>
+  </div>
+
+  <div class="statusbar">
+    <span id="status" role="status" aria-live="polite">Ready</span>
+    <span>Zero-SSRF Loopback Guard · Read-Only SQLite</span>
+  </div>
+</div>
+<script type="module" src="./main.js"></script>
+</body>
+</html>

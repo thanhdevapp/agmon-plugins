@@ -1,0 +1,30 @@
+{
+  "id": "community.inspo-assets-board",
+  "name": "Inspo & Agent Assets Board",
+  "version": "1.0.0",
+  "publisher": "community",
+  "license": "MIT",
+  "category": "Monitoring",
+  "execution": "sandboxed-ui",
+  "description": "Pin design references, color swatches, and agent-generated artifact links in a compact sidebar board persisted per plugin.",
+  "entry": "index.html",
+  "sandbox": {
+    "type": "iframe-opaque-origin",
+    "attributes": "allow-scripts",
+    "allowSameOrigin": false
+  },
+  "permissions": [
+    "storage:pluginScope",
+    "theme:subscribe"
+  ],
+  "contributes": {
+    "sidebarPanels": [
+      {
+        "id": "inspo",
+        "title": "Inspo",
+        "icon": "Layers",
+        "position": "right"
+      }
+    ]
+  }
+}

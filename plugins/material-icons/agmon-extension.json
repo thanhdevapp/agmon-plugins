@@ -1,0 +1,52 @@
+{
+  "id": "community.material-icons",
+  "name": "Material Color File Icons",
+  "version": "1.0.0",
+  "publisher": "community",
+  "license": "MIT",
+  "category": "Themes",
+  "execution": "data",
+  "description": "Colorful Material-inspired SVG file and folder icons for dark and light themes.",
+  "permissions": [],
+  "contributes": {
+    "iconThemes": [
+      {
+        "id": "material-color-icons",
+        "name": "Material Color Icons",
+        "category": "any",
+        "description": "Color-coded icons for TypeScript, JavaScript, Python, SQL, configs, and project folders",
+        "fileExtensions": {
+          ".ts": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><rect x=\"1.5\" y=\"1.5\" width=\"13\" height=\"13\" rx=\"2\" fill=\"#3178c6\"/><path d=\"M4.5 6.5h4M6.5 6.5v5.5M10 11.2c.5.5 1.8.6 2.2-.2.4-.9-1.7-1.1-1.8-2.1-.1-.9 1-1.4 2-.9\" stroke=\"#ffffff\" stroke-width=\"1.2\" fill=\"none\"/></svg>",
+          ".tsx": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><rect x=\"1.5\" y=\"1.5\" width=\"13\" height=\"13\" rx=\"2\" fill=\"#3178c6\"/><path d=\"M4.5 6.5h4M6.5 6.5v5.5M10 11.2c.5.5 1.8.6 2.2-.2.4-.9-1.7-1.1-1.8-2.1-.1-.9 1-1.4 2-.9\" stroke=\"#ffffff\" stroke-width=\"1.2\" fill=\"none\"/></svg>",
+          ".js": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><rect x=\"1.5\" y=\"1.5\" width=\"13\" height=\"13\" rx=\"2\" fill=\"#f7df1e\"/><path d=\"M6.5 6v4.5c0 1-.8 1.5-1.8 1.2M9.5 11.2c.5.5 1.8.6 2.2-.2.4-.9-1.7-1.1-1.8-2.1-.1-.9 1-1.4 2-.9\" stroke=\"#1f2328\" stroke-width=\"1.2\" fill=\"none\"/></svg>",
+          ".jsx": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><rect x=\"1.5\" y=\"1.5\" width=\"13\" height=\"13\" rx=\"2\" fill=\"#f7df1e\"/><path d=\"M6.5 6v4.5c0 1-.8 1.5-1.8 1.2M9.5 11.2c.5.5 1.8.6 2.2-.2.4-.9-1.7-1.1-1.8-2.1-.1-.9 1-1.4 2-.9\" stroke=\"#1f2328\" stroke-width=\"1.2\" fill=\"none\"/></svg>",
+          ".mjs": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><rect x=\"1.5\" y=\"1.5\" width=\"13\" height=\"13\" rx=\"2\" fill=\"#f7df1e\"/><path d=\"M6.5 6v4.5c0 1-.8 1.5-1.8 1.2M9.5 11.2c.5.5 1.8.6 2.2-.2.4-.9-1.7-1.1-1.8-2.1-.1-.9 1-1.4 2-.9\" stroke=\"#1f2328\" stroke-width=\"1.2\" fill=\"none\"/></svg>",
+          ".py": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><rect x=\"2\" y=\"2\" width=\"12\" height=\"12\" rx=\"3\" fill=\"#3776ab\"/><circle cx=\"6\" cy=\"5.5\" r=\"1\" fill=\"#ffd43b\"/><circle cx=\"10\" cy=\"10.5\" r=\"1\" fill=\"#ffffff\"/></svg>",
+          ".sql": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"#38bdf8\" stroke-width=\"1.4\"><ellipse cx=\"8\" cy=\"4\" rx=\"5\" ry=\"2\"/><path d=\"M3 4v8c0 1.1 2.2 2 5 2s5-.9 5-2V4\"/><path d=\"M3 8c0 1.1 2.2 2 5 2s5-.9 5-2\"/></svg>",
+          ".sqlite": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"#38bdf8\" stroke-width=\"1.4\"><ellipse cx=\"8\" cy=\"4\" rx=\"5\" ry=\"2\"/><path d=\"M3 4v8c0 1.1 2.2 2 5 2s5-.9 5-2V4\"/><path d=\"M3 8c0 1.1 2.2 2 5 2s5-.9 5-2\"/></svg>",
+          ".db": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"#38bdf8\" stroke-width=\"1.4\"><ellipse cx=\"8\" cy=\"4\" rx=\"5\" ry=\"2\"/><path d=\"M3 4v8c0 1.1 2.2 2 5 2s5-.9 5-2V4\"/><path d=\"M3 8c0 1.1 2.2 2 5 2s5-.9 5-2\"/></svg>",
+          ".json": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\"><path d=\"M5 3c-1.2 0-1.5.7-1.5 2v1.5C3.5 7.5 3 8 2 8c1 0 1.5.5 1.5 1.5V11c0 1.3.3 2 1.5 2M11 3c1.2 0 1.5.7 1.5 2v1.5c0 1 .5 1.5 1.5 1.5-1 0-1.5.5-1.5 1.5V11c0 1.3-.3 2-1.5 2\"/></svg>",
+          ".md": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\"><rect x=\"3\" y=\"2\" width=\"10\" height=\"12\" rx=\"1.5\"/><path d=\"M5.5 5.5h5M5.5 8h5M5.5 10.5h3\"/></svg>"
+        },
+        "fileNames": {
+          "package.json": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\"><path d=\"M5 3c-1.2 0-1.5.7-1.5 2v1.5C3.5 7.5 3 8 2 8c1 0 1.5.5 1.5 1.5V11c0 1.3.3 2 1.5 2M11 3c1.2 0 1.5.7 1.5 2v1.5c0 1 .5 1.5 1.5 1.5-1 0-1.5.5-1.5 1.5V11c0 1.3-.3 2-1.5 2\"/></svg>",
+          "tsconfig.json": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><rect x=\"1.5\" y=\"1.5\" width=\"13\" height=\"13\" rx=\"2\" fill=\"#3178c6\"/><path d=\"M4.5 6.5h4M6.5 6.5v5.5M10 11.2c.5.5 1.8.6 2.2-.2.4-.9-1.7-1.1-1.8-2.1-.1-.9 1-1.4 2-.9\" stroke=\"#ffffff\" stroke-width=\"1.2\" fill=\"none\"/></svg>",
+          "README.md": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\"><rect x=\"3\" y=\"2\" width=\"10\" height=\"12\" rx=\"1.5\"/><path d=\"M5.5 5.5h5M5.5 8h5M5.5 10.5h3\"/></svg>"
+        },
+        "folderNames": {
+          "src": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M2 4.5A1.5 1.5 0 0 1 3.5 3h3l1.5 1.5h4.5A1.5 1.5 0 0 1 14 6v5.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 11.5v-7z\" fill=\"#60a5fa\"/></svg>",
+          "docs": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M2 4.5A1.5 1.5 0 0 1 3.5 3h3l1.5 1.5h4.5A1.5 1.5 0 0 1 14 6v5.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 11.5v-7z\" fill=\"#60a5fa\"/></svg>",
+          "plugins": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M2 4.5A1.5 1.5 0 0 1 3.5 3h3l1.5 1.5h4.5A1.5 1.5 0 0 1 14 6v5.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 11.5v-7z\" fill=\"#60a5fa\"/></svg>",
+          "market": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M2 4.5A1.5 1.5 0 0 1 3.5 3h3l1.5 1.5h4.5A1.5 1.5 0 0 1 14 6v5.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 11.5v-7z\" fill=\"#60a5fa\"/></svg>",
+          "scripts": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 16 16\"><path d=\"M2 4.5A1.5 1.5 0 0 1 3.5 3h3l1.5 1.5h4.5A1.5 1.5 0 0 1 14 6v5.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 11.5v-7z\" fill=\"#60a5fa\"/></svg>"
+        }
+      }
+    ]
+  },
+  "entry": null,
+  "sandbox": {
+    "type": "none",
+    "attributes": "",
+    "allowSameOrigin": false
+  }
+}
