@@ -398,7 +398,7 @@ if (typeof document !== "undefined" && document.getElementById("canvas")) {
           x: (c.x1 + c.x2) / 2,
           y: (c.y1 + c.y2) / 2 - 6,
           fill: fg,
-          "font-size": "10.5",
+          style: "font-size: var(--font-size-toolbar, 12px)",
           "text-anchor": "middle",
         });
         lbl.textContent = edge.label;
@@ -473,7 +473,7 @@ if (typeof document !== "undefined" && document.getElementById("canvas")) {
         x: n.x + n.w / 2,
         y: n.y + n.h / 2 + 4,
         fill: textFill,
-        "font-size": "12",
+        style: "font-size: var(--font-size-toolbar, 12px)",
         "font-weight": "600",
         "text-anchor": "middle",
       });
