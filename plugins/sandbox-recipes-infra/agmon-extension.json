@@ -1,7 +1,7 @@
 {
   "id": "community.sandbox-recipes-infra",
   "name": "Docker, K8s & Sandbox VM Recipes",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "publisher": "community",
   "license": "MIT",
   "category": "Developer Tools",

@@ -21,24 +21,24 @@
 html, body { height: 100%; margin: 0; background: var(--bg); color: var(--text); font: var(--ui-size)/1.45 var(--ui-font); overflow: hidden; }
 .shell { display: flex; flex-direction: column; height: 100vh; }
 .bar { display: flex; align-items: center; gap: 6px; padding: 6px 10px; background: var(--panel); border-bottom: 1px solid var(--border); flex-wrap: wrap; }
-.bar h1 { font-size: 12.5px; margin: 0; font-weight: 700; margin-right: auto; }
-.input, select { background: var(--bg); color: var(--text); border: 1px solid var(--border); border-radius: 5px; padding: 4px 8px; font: 12px inherit; outline: none; }
+.bar h1 { font-size: var(--font-size-ui, 13px); margin: 0; font-weight: 700; margin-right: auto; }
+.input, select { background: var(--bg); color: var(--text); border: 1px solid var(--border); border-radius: 5px; padding: 4px 8px; font: var(--font-size-toolbar, 12px) inherit; outline: none; }
 .input:focus { border-color: var(--accent); }
-.btn { display: inline-flex; align-items: center; gap: 4px; background: var(--card); color: var(--text); border: 1px solid var(--border); border-radius: 5px; padding: 4px 8px; font: 11px inherit; cursor: pointer; }
+.btn { display: inline-flex; align-items: center; gap: 4px; background: var(--card); color: var(--text); border: 1px solid var(--border); border-radius: 5px; padding: 4px 8px; font: var(--font-size-toolbar, 12px) inherit; cursor: pointer; }
 .btn:hover { border-color: var(--accent); }
-.crumb { padding: 5px 10px; background: var(--card); border-bottom: 1px solid var(--border); font: 11px var(--mono); color: var(--accent); display: flex; align-items: center; justify-content: space-between; }
+.crumb { padding: 5px 10px; background: var(--card); border-bottom: 1px solid var(--border); font: var(--font-size-toolbar, 12px) var(--mono); color: var(--accent); display: flex; align-items: center; justify-content: space-between; }
 .body { flex: 1; min-height: 0; overflow: auto; padding: 10px; }
 .card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 10px; margin-bottom: 10px; }
-.badge { font-family: var(--mono); font-size: 10px; padding: 2px 7px; border-radius: 999px; border: 1px solid var(--border); color: var(--muted); }
-.method-pill { font-family: var(--mono); font-size: 10.5px; font-weight: 800; padding: 2px 7px; border-radius: 5px; display: inline-block; min-width: 52px; text-align: center; }
+.badge { font-family: var(--mono); font-size: var(--font-size-toolbar, 12px); padding: 2px 7px; border-radius: 999px; border: 1px solid var(--border); color: var(--muted); }
+.method-pill { font-family: var(--mono); font-size: var(--font-size-toolbar, 12px); font-weight: 800; padding: 2px 7px; border-radius: 5px; display: inline-block; min-width: 52px; text-align: center; }
 .m-GET { background: color-mix(in srgb,var(--status-running,#34d399) 15%,transparent); color: var(--status-running,#34d399); border: 1px solid color-mix(in srgb,var(--status-running,#34d399) 40%,transparent); }
 .m-POST { background: color-mix(in srgb,var(--accent-primary,#38bdf8) 15%,transparent); color: var(--accent-primary,#38bdf8); border: 1px solid color-mix(in srgb,var(--accent-primary,#38bdf8) 40%,transparent); }
 .m-PUT, .m-PATCH { background: color-mix(in srgb,var(--status-warning,#fbbf24) 15%,transparent); color: var(--status-warning,#fbbf24); border: 1px solid color-mix(in srgb,var(--status-warning,#fbbf24) 40%,transparent); }
 .m-DELETE { background: color-mix(in srgb,var(--status-error,#f87171) 15%,transparent); color: var(--status-error,#f87171); border: 1px solid color-mix(in srgb,var(--status-error,#f87171) 40%,transparent); }
-table { width: 100%; border-collapse: collapse; font-size: 11.5px; }
+table { width: 100%; border-collapse: collapse; font-size: var(--font-size-toolbar, 12px); }
 th, td { border-bottom: 1px solid var(--border); padding: 6px 8px; text-align: left; }
 th { background: var(--panel); color: var(--muted); position: sticky; top: 0; }
-.tree-row { display: flex; align-items: center; gap: 5px; padding: 2px 4px; border-radius: 4px; font-family: var(--mono); font-size: 11.5px; cursor: pointer; }
+.tree-row { display: flex; align-items: center; gap: 5px; padding: 2px 4px; border-radius: 4px; font-family: var(--mono); font-size: var(--font-size-toolbar, 12px); cursor: pointer; }
 .tree-row:hover { background: color-mix(in srgb,var(--accent-primary,#38bdf8) 8%,transparent); }
 .tree-key { color: color-mix(in srgb,var(--accent-primary,#38bdf8) 45%,var(--text-main,#e6edf3)); }
 .tree-str { color: color-mix(in srgb,var(--status-running,#34d399) 45%,var(--text-main,#e6edf3)); }

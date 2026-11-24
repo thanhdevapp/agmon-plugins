@@ -34,7 +34,7 @@ html, body {
   background: var(--isv-surface);
   border-bottom: 1px solid var(--isv-border);
 }
-.title { font-weight: 700; font-size: 12px; margin-right: 6px; }
+.title { font-weight: 700; font-size: var(--font-size-toolbar, 12px); margin-right: 6px; }
 .sep { width: 1px; height: 18px; background: var(--isv-border); margin: 0 2px; }
 .btn {
   display: inline-flex;
@@ -45,7 +45,7 @@ html, body {
   border: 1px solid var(--isv-border);
   border-radius: 5px;
   padding: 4px 7px;
-  font-size: 11px;
+  font-size: var(--font-size-toolbar, 12px);
   cursor: pointer;
 }
 .btn:hover { border-color: var(--isv-accent); }
@@ -89,5 +89,5 @@ canvas {
   background: var(--isv-surface);
   border-top: 1px solid var(--isv-border);
   color: var(--isv-fg-muted);
-  font-size: 11px;
+  font-size: var(--font-size-toolbar, 12px);
 }

@@ -21,28 +21,28 @@
 html, body { height: 100%; margin: 0; background: var(--bg); color: var(--text); font: var(--ui-size)/1.45 var(--ui-font); overflow: hidden; }
 .shell { display: flex; flex-direction: column; height: 100vh; }
 .bar { display: flex; align-items: center; gap: 6px; padding: 6px 10px; background: var(--panel); border-bottom: 1px solid var(--border); flex-wrap: wrap; }
-.bar h1 { font-size: 12.5px; margin: 0; font-weight: 700; margin-right: auto; }
+.bar h1 { font-size: var(--font-size-ui, 13px); margin: 0; font-weight: 700; margin-right: auto; }
 .tabs { display: inline-flex; gap: 3px; background: color-mix(in srgb,var(--bg-workbench,#0d1117) 22%,transparent); border: 1px solid var(--border); border-radius: 6px; padding: 2px; }
-.tab-btn { background: transparent; color: var(--muted); border: 0; border-radius: 4px; padding: 3px 8px; font: 11px inherit; font-weight: 600; cursor: pointer; }
+.tab-btn { background: transparent; color: var(--muted); border: 0; border-radius: 4px; padding: 3px 8px; font: var(--font-size-toolbar, 12px) inherit; font-weight: 600; cursor: pointer; }
 .tab-btn.active { background: var(--card); color: var(--accent); }
-.btn { display: inline-flex; align-items: center; gap: 4px; background: var(--card); color: var(--text); border: 1px solid var(--border); border-radius: 5px; padding: 4px 8px; font: 11px inherit; cursor: pointer; }
+.btn { display: inline-flex; align-items: center; gap: 4px; background: var(--card); color: var(--text); border: 1px solid var(--border); border-radius: 5px; padding: 4px 8px; font: var(--font-size-toolbar, 12px) inherit; cursor: pointer; }
 .btn:hover { border-color: var(--accent); }
 .btn.primary { background: var(--accent); color: var(--text-on-accent,#08101c); border-color: transparent; font-weight: 700; }
-.badge { font-family: var(--mono); font-size: 10.5px; padding: 2px 7px; border-radius: 999px; border: 1px solid var(--border); color: var(--muted); }
+.badge { font-family: var(--mono); font-size: var(--font-size-toolbar, 12px); padding: 2px 7px; border-radius: 999px; border: 1px solid var(--border); color: var(--muted); }
 .badge.warn { color: var(--warn); border-color: color-mix(in srgb,var(--status-warning,#fbbf24) 45%,transparent); background: color-mix(in srgb,var(--status-warning,#fbbf24) 10%,transparent); }
 .badge.ok { color: var(--green); border-color: color-mix(in srgb,var(--status-running,#34d399) 45%,transparent); background: color-mix(in srgb,var(--status-running,#34d399) 10%,transparent); }
 .body { flex: 1; min-height: 0; overflow: auto; padding: 10px; display: flex; flex-direction: column; gap: 10px; }
 .grid-top { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 10px; }
 .card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 10px; }
-.card-title { font-size: 11.5px; font-weight: 700; margin-bottom: 8px; display: flex; align-items: center; justify-content: space-between; }
+.card-title { font-size: var(--font-size-toolbar, 12px); font-weight: 700; margin-bottom: 8px; display: flex; align-items: center; justify-content: space-between; }
 .agent-row { border: 1px solid var(--border); border-radius: 7px; padding: 8px 10px; margin-bottom: 6px; background: color-mix(in srgb,var(--bg-workbench,#0d1117) 16%,transparent); }
 .row { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
 .meter-track { height: 6px; background: var(--bg); border-radius: 999px; overflow: hidden; margin-top: 6px; border: 1px solid var(--border); }
 .meter-fill { height: 100%; border-radius: 999px; transition: width .2s ease; }
 .dag-wrap { width: 100%; overflow: auto; background: var(--bg); border: 1px solid var(--border); border-radius: 6px; padding: 6px; }
-.muted { color: var(--muted); font-size: 11px; }
+.muted { color: var(--muted); font-size: var(--font-size-toolbar, 12px); }
 .mono { font-family: var(--mono); }
-.bar-row { display: flex; align-items: center; gap: 8px; margin-bottom: 5px; font-size: 11px; }
+.bar-row { display: flex; align-items: center; gap: 8px; margin-bottom: 5px; font-size: var(--font-size-toolbar, 12px); }
 .bar-track { flex: 1; height: 8px; background: var(--bg); border-radius: 4px; overflow: hidden; }
 .bar-fill { height: 100%; background: var(--accent); border-radius: 4px; }
 .icon { flex: none; display: block; }
