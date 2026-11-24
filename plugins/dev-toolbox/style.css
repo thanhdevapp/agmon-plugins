@@ -1,4 +1,9 @@
 :root {
+  /* AGMon's default type. The host pushes --font-family-ui / --font-size-ui over
+     `theme:variables`; the fallbacks below match the app until that push arrives. */
+  --ui-font: var(--font-family-ui, "Geist", "Geist Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif);
+  --ui-size: var(--font-size-ui, 13px);
+  --code-font: var(--font-family-mono, "SF Mono", Monaco, "Cascadia Mono", Consolas, "DejaVu Sans Mono", "Liberation Mono", monospace);
   color-scheme: dark;
   --bg: var(--bg-workbench, #0d1117);
   --panel: var(--bg-panel, #111622);
@@ -6,24 +11,24 @@
   --border: var(--border-subtle, #262f40);
   --text: var(--text-main, #e6edf3);
   --muted: var(--text-muted, #8b949e);
-  --accent: var(--accent-primary, #38bdf8);
-  --green: var(--status-running, #34d399);
-  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --accent: var(--accent-primary,#38bdf8);
+  --green: var(--status-running,#34d399);
+  --mono: var(--code-font);
 }
 * { box-sizing: border-box; }
-html, body { height: 100%; margin: 0; background: var(--bg); color: var(--text); font: 12px/1.45 system-ui, -apple-system, sans-serif; overflow: hidden; }
+html, body { height: 100%; margin: 0; background: var(--bg); color: var(--text); font: var(--ui-size)/1.45 var(--ui-font); overflow: hidden; }
 .shell { display: flex; flex-direction: column; height: 100vh; }
 .bar { display: flex; align-items: center; gap: 6px; padding: 6px 10px; background: var(--panel); border-bottom: 1px solid var(--border); flex-wrap: wrap; }
 .bar h1 { font-size: 12.5px; margin: 0; font-weight: 700; margin-right: auto; }
 select, .input { background: var(--bg); color: var(--text); border: 1px solid var(--border); border-radius: 5px; padding: 5px 8px; font: 12px inherit; outline: none; }
 select:focus, .input:focus { border-color: var(--accent); }
 .btn { display: inline-flex; align-items: center; gap: 4px; background: var(--card); color: var(--text); border: 1px solid var(--border); border-radius: 5px; padding: 4px 10px; font: 11.5px inherit; cursor: pointer; }
-.btn.primary { background: var(--accent); color: #08101c; border-color: transparent; font-weight: 700; }
+.btn.primary { background: var(--accent); color: var(--text-on-accent,#08101c); border-color: transparent; font-weight: 700; }
 .layout { flex: 1; min-height: 0; display: grid; grid-template-columns: 185px minmax(0, 1fr); }
 .side { border-right: 1px solid var(--border); background: var(--panel); padding: 6px; overflow: auto; }
 .tool-item { width: 100%; text-align: left; padding: 5px 8px; margin-bottom: 3px; border: 1px solid transparent; border-radius: 5px; background: transparent; color: var(--muted); font: 11.5px inherit; cursor: pointer; }
-.tool-item:hover { color: var(--text); background: rgba(255,255,255,0.04); }
-.tool-item.active { color: var(--accent); background: var(--card); border-color: rgba(56,189,248,0.4); font-weight: 700; }
+.tool-item:hover { color: var(--text); background: color-mix(in srgb,var(--text-main,#e6edf3) 4%,transparent); }
+.tool-item.active { color: var(--accent); background: var(--card); border-color: color-mix(in srgb,var(--accent-primary,#38bdf8) 40%,transparent); font-weight: 700; }
 .main { padding: 10px; overflow: auto; display: flex; flex-direction: column; gap: 8px; }
 .mono { font-family: var(--mono); }
 .card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 10px; margin: 0; white-space: pre-wrap; word-break: break-word; min-height: 120px; }
