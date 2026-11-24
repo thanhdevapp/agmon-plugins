@@ -19,14 +19,14 @@
 html, body { height: 100%; margin: 0; background: var(--bg); color: var(--text); font: var(--ui-size)/1.45 var(--ui-font); overflow: hidden; }
 .shell { display: flex; flex-direction: column; height: 100vh; }
 .bar { display: flex; align-items: center; gap: 6px; padding: 6px 10px; background: var(--panel); border-bottom: 1px solid var(--border); flex-wrap: wrap; }
-.bar h1 { font-size: 12.5px; margin: 0; font-weight: 700; margin-right: auto; }
-select, .input { background: var(--bg); color: var(--text); border: 1px solid var(--border); border-radius: 5px; padding: 5px 8px; font: 12px inherit; outline: none; }
+.bar h1 { font-size: var(--font-size-ui, 13px); margin: 0; font-weight: 700; margin-right: auto; }
+select, .input { background: var(--bg); color: var(--text); border: 1px solid var(--border); border-radius: 5px; padding: 5px 8px; font: var(--font-size-toolbar, 12px) inherit; outline: none; }
 select:focus, .input:focus { border-color: var(--accent); }
-.btn { display: inline-flex; align-items: center; gap: 4px; background: var(--card); color: var(--text); border: 1px solid var(--border); border-radius: 5px; padding: 4px 10px; font: 11.5px inherit; cursor: pointer; }
+.btn { display: inline-flex; align-items: center; gap: 4px; background: var(--card); color: var(--text); border: 1px solid var(--border); border-radius: 5px; padding: 4px 10px; font: var(--font-size-toolbar, 12px) inherit; cursor: pointer; }
 .btn.primary { background: var(--accent); color: var(--text-on-accent,#08101c); border-color: transparent; font-weight: 700; }
 .layout { flex: 1; min-height: 0; display: grid; grid-template-columns: 185px minmax(0, 1fr); }
 .side { border-right: 1px solid var(--border); background: var(--panel); padding: 6px; overflow: auto; }
-.tool-item { width: 100%; text-align: left; padding: 5px 8px; margin-bottom: 3px; border: 1px solid transparent; border-radius: 5px; background: transparent; color: var(--muted); font: 11.5px inherit; cursor: pointer; }
+.tool-item { width: 100%; text-align: left; padding: 5px 8px; margin-bottom: 3px; border: 1px solid transparent; border-radius: 5px; background: transparent; color: var(--muted); font: var(--font-size-toolbar, 12px) inherit; cursor: pointer; }
 .tool-item:hover { color: var(--text); background: color-mix(in srgb,var(--text-main,#e6edf3) 4%,transparent); }
 .tool-item.active { color: var(--accent); background: var(--card); border-color: color-mix(in srgb,var(--accent-primary,#38bdf8) 40%,transparent); font-weight: 700; }
 .main { padding: 10px; overflow: auto; display: flex; flex-direction: column; gap: 8px; }
