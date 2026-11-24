@@ -1,7 +1,7 @@
 {
   "id": "community.agent-control-room",
   "name": "Agent Control Room, Inbox & Pitwall HUD",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "community",
   "license": "MIT",
   "category": "Monitoring",

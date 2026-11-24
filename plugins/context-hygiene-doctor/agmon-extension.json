@@ -1,7 +1,7 @@
 {
   "id": "community.context-hygiene-doctor",
   "name": "Context Ballast, Hygiene & Test Queue",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "community",
   "license": "MIT",
   "category": "Developer Tools",

@@ -1,7 +1,7 @@
 {
   "id": "thanhdevapp.agmon-git-log",
   "name": "Git Log",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "publisher": "thanhdevapp",
   "execution": "sandboxed-ui",
   "description": "Git history for AGMon with a lane graph, branch tree, filters, changed files and commit details.",

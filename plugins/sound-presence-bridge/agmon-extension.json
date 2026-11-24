@@ -1,7 +1,7 @@
 {
   "id": "community.sound-presence-bridge",
   "name": "Audio Alerts & Presence Configurator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "community",
   "license": "MIT",
   "category": "Monitoring",

@@ -1,7 +1,7 @@
 {
   "id": "community.json-openapi-har-viewer",
   "name": "JSON Graph, OpenAPI & HAR Waterfall",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "community",
   "license": "MIT",
   "category": "Viewers",
