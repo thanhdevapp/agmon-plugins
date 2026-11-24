@@ -11,7 +11,7 @@ html, body { margin: 0; padding: 0; height: 100%; font-family: var(--ui-font); f
 .bar h1 { margin: 0; font-size: 12px; font-weight: 600; color: var(--text-bright, #f8fafc); margin-right: auto; }
 .btn { padding: 4px 8px; border-radius: 5px; border: 1px solid var(--border-card, #303746); background: var(--bg-panel, #1e2430); color: var(--text-main, #e5e7eb); cursor: pointer; font-size: 11px; }
 .btn:hover { background: var(--bg-hover, #283040); }
-.btn.primary { background: var(--accent-primary, #38bdf8); color: #09090b; border-color: transparent; font-weight: 600; }
+.btn.primary { background: var(--accent-primary,#38bdf8); color: var(--text-on-accent,#09090b); border-color: transparent; font-weight: 600; }
 .input, select, textarea { background: var(--bg-workbench, #0e1117); color: var(--text-main, #e5e7eb); border: 1px solid var(--border-subtle, #2b3240); border-radius: 5px; padding: 4px 8px; font-size: 11px; font-family: inherit; }
 .mono { font-family: var(--code-font); }
 .body { flex: 1; min-height: 0; overflow: auto; padding: 10px; }
