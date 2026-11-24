@@ -1,7 +1,7 @@
 {
   "id": "community.git-blame-pr-tour",
   "name": "Line Blame & PR Diff Breakdown",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "community",
   "license": "MIT",
   "category": "Developer Tools",
