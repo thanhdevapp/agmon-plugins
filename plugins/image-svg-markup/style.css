@@ -21,7 +21,7 @@ html, body {
   height: 100%;
   background: var(--isv-bg);
   color: var(--isv-fg);
-  font: 12px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font: var(--ui-size)/1.4 var(--ui-font);
   overflow: hidden;
 }
 .shell { display: flex; flex-direction: column; height: 100vh; }
