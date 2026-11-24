@@ -162,9 +162,9 @@ if (typeof document !== "undefined" && document.getElementById("dagSvg")) {
         })
       );
       g.appendChild(svgEl("circle", { cx: n.x + 11, cy: n.y + 15, r: 3.5, fill: stroke }));
-      const t1 = svgEl("text", { x: n.x + 20, y: n.y + 19, fill: "#e6edf3", "font-size": "10.5", "font-weight": "700" });
+      const t1 = svgEl("text", { x: n.x + 20, y: n.y + 19, style: "fill: var(--text-main, #e6edf3); font-size: var(--font-size-toolbar, 12px); font-weight: 700" });
       t1.textContent = n.label;
-      const t2 = svgEl("text", { x: n.x + 10, y: n.y + 33, fill: "#8b949e", "font-size": "9.5" });
+      const t2 = svgEl("text", { x: n.x + 10, y: n.y + 33, style: "fill: var(--text-muted, #8b949e); font-size: var(--font-size-toolbar, 12px)" });
       t2.textContent = n.sub;
       g.append(t1, t2);
       children.push(g);
